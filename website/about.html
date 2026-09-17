@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GABI & IEEBA — Об ассоциации</title>
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="main.html" class="logo">GABI & IEEBA</a>
+            
+            <nav class="nav">
+                <a href="about.html" class="active" data-i18n="nav_about">Об ассоциации</a>
+                <a href="main.html#benefits" data-i18n="nav_benefits">Преимущества</a>
+                <a href="main.html#events" data-i18n="nav_events">Чемпионаты</a>
+                <a href="main.html#specialists" data-i18n="nav_specialists">Специалисты</a>
+                <a href="main.html#rating" data-i18n="nav_rating">Рейтинг</a>
+                <a href="main.html#news" data-i18n="nav_news">Новости</a>
+                <a href="contacts.html" data-i18n="nav_contacts">Контакты</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" onclick="changeLanguage('ru')">RU</button>
+                    <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                </div>
+                <a href="#" class="btn-login" data-i18n="btn_login">Войти</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO СЕКЦИЯ СТРАНИЦЫ -->
+        <section class="hero page-hero">
+            <div class="container fade-in">
+                <span class="hero-badge" data-i18n="about_hero_badge">О нас</span>
+                <h1><span data-i18n="about_hero_title">Международная ассоциация</span><br><span class="highlight">GABI & IEEBA</span></h1>
+                <p data-i18n="about_hero_desc">Создаем глобальное экспертное сообщество, объединяем лучших специалистов бьюти-индустрии и устанавливаем высокие стандарты качества.</p>
+            </div>
+        </section>
+
+        <!-- 1. ИСТОРИЯ, ЦЕЛИ И МИССИЯ -->
+        <section class="about-story-section">
+            <div class="container">
+                <div class="about-story-grid fade-in">
+                    <div class="story-content">
+                        <span class="sub-title" data-i18n="story_subtitle">Наша история</span>
+                        <h2 data-i18n="story_title">Путь к международному признанию</h2>
+                        <p data-i18n="story_text_1">Ассоциация GABI & IEEBA была основана как объединение ведущих мастеров, судей и экспертов бьюти-сферы и эстетической медицины. За годы работы мы прошли путь от локальных профессиональных встреч до международной экосистемы.</p>
+                        <p data-i18n="story_text_2">Сегодня ассоциация выступает гарантом независимой оценки, стандартизации квалификаций и развития международной соревновательной культуры.</p>
+                    </div>
+                    <div class="mission-box">
+                        <div class="mission-item">
+                            <h3 data-i18n="mission_title">🎯 Миссия</h3>
+                            <p data-i18n="mission_desc">Формирование единых стандартов профессионализма, поддержка специалистов на всех этапах карьеры и создание прозрачной среды для развития.</p>
+                        </div>
+                        <div class="mission-item">
+                            <h3 data-i18n="goals_title">💡 Ключевые цели</h3>
+                            <ul>
+                                <li data-i18n="goal_1">Организация международной системы чемпионатов и кубков</li>
+                                <li data-i18n="goal_2">Разработка и внедрение стандартов аккредитации мастеров и судей</li>
+                                <li data-i18n="goal_3">Ведение прозрачного накопительного рейтинга специалистов</li>
+                                <li data-i18n="goal_4">Поддержка международного профессионального диалога и обмена опытом</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. РУКОВОДСТВО И ПРЕДСТАВИТЕЛИ -->
+        <section class="leadership-section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title" data-i18n="leadership_title">Руководство и представители</h2>
+                    <p class="section-subtitle" data-i18n="leadership_subtitle">Лидеры сообщества, формирующие векторы развития и судейские регламенты</p>
+                </div>
+
+                <div class="leadership-grid fade-in">
+                    <div class="leader-card">
+                        <div class="leader-avatar">АИ</div>
+                        <h3 data-i18n="leader1_name">Анна Ивановская</h3>
+                        <span class="leader-role" data-i18n="leader1_role">Президент ассоциации GABI</span>
+                        <p class="leader-desc" data-i18n="leader1_desc">Международный эксперт, судья высшей категории, организатор ключевых профильных чемпионатов.</p>
+                    </div>
+
+                    <div class="leader-card">
+                        <div class="leader-avatar">МП</div>
+                        <h3 data-i18n="leader2_name">Мария Петрова</h3>
+                        <span class="leader-role" data-i18n="leader2_role">Вице-президент IEEBA</span>
+                        <p class="leader-desc" data-i18n="leader2_desc">Руководитель судейской коллегии, автор методических программ по аккредитации мастеров.</p>
+                    </div>
+
+                    <div class="leader-card">
+                        <div class="leader-avatar">ЕК</div>
+                        <h3 data-i18n="leader3_name">Елена Ковалева</h3>
+                        <span class="leader-role" data-i18n="leader3_role">Представитель в Европе и СНГ</span>
+                        <p class="leader-desc" data-i18n="leader3_desc">Куратор международных связей, спикер международных форумов и образовательных программ.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. МЕЖДУНАРОДНАЯ ДЕЯТЕЛЬНОСТЬ -->
+        <section class="global-activity-section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title" data-i18n="global_title">Международная деятельность</h2>
+                    <p class="section-subtitle" data-i18n="global_subtitle">Масштаб присутствия и ключевые направления работы по всему миру</p>
+                </div>
+
+                <div class="global-grid fade-in">
+                    <div class="global-card">
+                        <div class="global-number">35+</div>
+                        <h3 data-i18n="global_item1_title">Стран-участниц</h3>
+                        <p data-i18n="global_item1_desc">Единая сеть мастеров, школ и экспертов, представленных в Европе, Азии и СНГ.</p>
+                    </div>
+
+                    <div class="global-card">
+                        <div class="global-number">50+</div>
+                        <h3 data-i18n="global_item2_title">Международных событий</h3>
+                        <p data-i18n="global_item2_desc">Ежегодные очные и онлайн-чемпионаты, конгрессы и судейские брифинги.</p>
+                    </div>
+
+                    <div class="global-card">
+                        <div class="global-number">100%</div>
+                        <h3 data-i18n="global_item3_title">Единые стандарты</h3>
+                        <p data-i18n="global_item3_desc">Стандартизированная система оценивания регламентов и выдачи международной документации.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. ПАРТНЁРЫ -->
+        <section class="partners-section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title" data-i18n="partners_title">Наши партнёры</h2>
+                    <p class="section-subtitle" data-i18n="partners_subtitle">Бренды, учебные центры и медиа-ресурсы, поддерживающие наши инициативы</p>
+                </div>
+
+                <div class="partners-grid fade-in">
+                    <div class="partner-card">
+                        <div class="partner-logo-placeholder">BRAND LOGO 1</div>
+                        <h4>Beauty Pro Cosmetics</h4>
+                        <span data-i18n="partner1_type">Генеральный спонсор</span>
+                    </div>
+
+                    <div class="partner-card">
+                        <div class="partner-logo-placeholder">BRAND LOGO 2</div>
+                        <h4>International Academy</h4>
+                        <span data-i18n="partner2_type">Образовательный партнёр</span>
+                    </div>
+
+                    <div class="partner-card">
+                        <div class="partner-logo-placeholder">BRAND LOGO 3</div>
+                        <h4>Esthetic Media Group</h4>
+                        <span data-i18n="partner3_type">Информационный партнёр</span>
+                    </div>
+
+                    <div class="partner-card">
+                        <div class="partner-logo-placeholder">BRAND LOGO 4</div>
+                        <h4>Global Beauty Forum</h4>
+                        <span data-i18n="partner4_type">Организационный партнёр</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA BLOCK -->
+        <section class="cta-section">
+            <div class="container fade-in">
+                <div class="cta-box">
+                    <h2 data-i18n="about_cta_title">Хотите стать официальным партнером или членом ассоциации?</h2>
+                    <p data-i18n="about_cta_desc">Свяжитесь с нами для обсуждения условий сотрудничества, аккредитации учебного центра или участия в турнирах.</p>
+                    <div class="cta-buttons">
+                        <a href="contacts.html" class="btn-primary" data-i18n="cta_btn_contact">Связаться с нами</a>
+                        <a href="#" class="btn-secondary" data-i18n="cta_btn_join">Стать членом</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <a href="main.html" class="logo">GABI & IEEBA</a>
+                <p style="margin-top: 10px; max-width: 300px;" data-i18n="footer_desc">Международная ассоциация бьюти-специалистов и экспертов эстетической медицины.</p>
+            </div>
+
+            <div class="footer-contacts">
+                <h4 data-i18n="footer_contacts_title">Контакты</h4>
+                <p data-i18n="footer_address">📍 г. Москва, ул. Пресненская наб., д. 12</p>
+                <p>✉️ info@gabi-ieeba.org</p>
+                <p>📞 +7 (800) 555-35-35</p>
+            </div>
+
+            <div class="footer-socials">
+                <h4 data-i18n="footer_socials_title">Мы в соцсетях</h4>
+                <div class="social-links">
+                    <a href="#" class="social-btn">Telegram</a>
+                    <a href="#" class="social-btn">VKontakte</a>
+                    <a href="#" class="social-btn">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 GABI & IEEBA Association. <span data-i18n="footer_rights">Все права защищены.</span></p>
+            <a href="#" style="color: var(--text-muted); text-decoration: none; font-size: 0.8rem;" data-i18n="privacy_policy">Политика конфиденциальности</a>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
