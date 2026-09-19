@@ -27,9 +27,28 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
 }
 
-/* Шапка */
+/* ==========================================
+   ИСПРАВЛЕНИЕ НЕВИДИМОСТИ (FADE-IN FIX)
+   ========================================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Делаем элементы видимыми сразу или по классу visible */
+.fade-in.visible,
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================
+   ШАПКА (HEADER)
+   ========================================== */
 .header {
     border-bottom: 1px solid var(--border-color);
     background: rgba(11, 15, 25, 0.85);
@@ -59,6 +78,7 @@ body {
 .nav {
     display: flex;
     gap: 25px;
+    align-items: center;
 }
 
 .nav a {
@@ -118,7 +138,48 @@ body {
     background: var(--border-color);
 }
 
-/* Кнопки общие */
+/* Выпадающее меню (Dropdown) */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 8px 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 16px;
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--accent);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* ==========================================
+   КНОПКИ ОБЩИЕ
+   ========================================== */
 .btn-primary {
     display: inline-block;
     background: var(--accent);
@@ -152,7 +213,85 @@ body {
     background: var(--border-color);
 }
 
-/* Общие заголовки секций */
+/* ==========================================
+   HERO СЕКЦИЯ (ПЕРВЫЙ ЭКРАН)
+   ========================================== */
+.hero {
+    position: relative;
+    min-height: calc(100vh - 75px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.18) 0%, rgba(245, 158, 11, 0) 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--text-main);
+}
+
+.hero .highlight {
+    color: var(--accent);
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* ==========================================
+   СЕКЦИИ И СЕТКИ (DIRECTIONS, EVENTS, ETC.)
+   ========================================== */
+section {
+    padding: 60px 0;
+}
+
 .section-header {
     text-align: center;
     margin-bottom: 50px;
@@ -167,23 +306,79 @@ body {
     color: var(--text-muted);
 }
 
-/* Анимация появления */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+.directions-grid, .events-grid, .benefits-grid, .specialists-grid, .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+.direction-card, .card, .benefit-card, .specialist-card, .news-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-/* Подвал */
+.direction-card:hover, .card:hover, .benefit-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.card-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Таблица рейтинга */
+.rating-table-wrapper {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow-x: auto;
+}
+
+.rating-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.rating-table th, .rating-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.rating-table th {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* ==========================================
+   ПОДВАЛ (FOOTER)
+   ========================================== */
 .footer {
     margin-top: auto;
     border-top: 1px solid var(--border-color);
     padding: 35px 0;
     font-size: 0.85rem;
     color: var(--text-muted);
+    background: #070a12;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

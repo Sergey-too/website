@@ -9,18 +9,34 @@
 </head>
 <body>
 
-    <!-- ШАПКА -->
+    <!-- ШАПКА / НАВИГАЦИЯ -->
     <header class="header">
         <div class="container header-content">
             <a href="main.html" class="logo">GABI & IEEBA</a>
             
             <nav class="nav">
-                <a href="#about" data-i18n="nav_about">Об ассоциации</a>
-                <a href="#benefits" data-i18n="nav_benefits">Преимущества</a>
-                <a href="#events" data-i18n="nav_events">Чемпионаты</a>
-                <a href="#specialists" data-i18n="nav_specialists">Специалисты</a>
-                <a href="#rating" data-i18n="nav_rating">Рейтинг</a>
-                <a href="#news" data-i18n="nav_news">Новости</a>
+                <a href="about.html" data-i18n="nav_about">Об ассоциации</a>
+                
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle"><span data-i18n="nav_participation">Участие</span> <span class="arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="membership.html" data-i18n="nav_membership">Членство</a>
+                        <a href="accreditation.html" data-i18n="nav_accreditation">Аккредитация</a>
+                        <a href="events.html" data-i18n="nav_events_all">Чемпионаты и мероприятия</a>
+                    </div>
+                </div>
+
+                <a href="specialists.html" data-i18n="nav_specialists">Специалисты</a>
+                <a href="rating.html" data-i18n="nav_rating">Рейтинг</a>
+
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle"><span data-i18n="nav_info">Информация</span> <span class="arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="news.html" data-i18n="nav_news">Новости</a>
+                        <a href="documents.html" data-i18n="nav_docs">Документы</a>
+                    </div>
+                </div>
+
                 <a href="contacts.html" data-i18n="nav_contacts">Контакты</a>
             </nav>
 
@@ -29,314 +45,310 @@
                     <button class="lang-btn active" onclick="changeLanguage('ru')">RU</button>
                     <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
                 </div>
-                <a href="#" class="btn-login" data-i18n="btn_login">Войти</a>
+                <a href="#" class="btn-login" data-i18n="btn_login">Личный кабинет</a>
             </div>
         </div>
     </header>
 
-    <!-- MAIN -->
     <main>
-        <!-- HERO СЕКЦИЯ -->
-        <section class="hero">
+        <!-- HERO СЕКЦИЯ (ОСТАЕТСЯ ВНИЗУ И ФИКСИРУЕТСЯ) -->
+        <section class="hero full-screen-hero hero-sticky">
             <div class="container fade-in">
-                <span class="hero-badge" data-i18n="hero_badge">Официальный портал ассоциации</span>
-                <h1><span data-i18n="hero_title_1">Международная ассоциация</span><br><span class="highlight">GABI & IEEBA</span></h1>
+                <span class="hero-badge" data-i18n="hero_badge">Международный портал ассоциации</span>
+                <h1>Международная ассоциация<br><span class="highlight">GABI & IEEBA</span></h1>
                 <p data-i18n="hero_desc">Объединение экспертов, проведение международных чемпионатов, аккредитация мастеров и прозрачный накопительный рейтинг.</p>
                 
                 <div class="hero-buttons">
                     <a href="#events" class="btn-primary" data-i18n="btn_events">Ближайшие чемпионаты</a>
-                    <a href="#" class="btn-secondary" data-i18n="btn_apply">Подать заявку</a>
+                    <a href="membership.html" class="btn-secondary" data-i18n="btn_apply">Подать заявку на членство</a>
                 </div>
             </div>
         </section>
 
-        <!-- 1. ПРЕЗЕНТАЦИЯ АССОЦИАЦИИ -->
-        <section id="about" class="about-section">
-            <div class="container">
-                <div class="section-header fade-in">
-                    <h2 class="section-title" data-i18n="about_title">О нашей ассоциации</h2>
-                    <p class="section-subtitle" data-i18n="about_subtitle">Развиваем профессиональное сообщество и устанавливаем международные стандарты</p>
-                </div>
+        <!-- ОБЕРТКА ВСЕГО ОСТАЛЬНОГО КОНТЕНТА (НАПЛЫВАЕТ СВЕРХУ НА HERO) -->
+        <div class="content-overlay">
 
-                <div class="about-grid fade-in">
-                    <div class="about-card">
-                        <h3>
-                            <img src="assets/img/trophy-cup.png" alt="" class="card-icon-inline">
-                            <span data-i18n="about_card1_title">Международные чемпионаты</span>
-                        </h3>
-                        <p data-i18n="about_card1_desc">Организация и проведение независимых профессиональных соревнований высшего уровня.</p>
+            <!-- 1. ПРЕЗЕНТАЦИЯ НАПРАВЛЕНИЙ -->
+            <section class="directions-section">
+                <div class="container">
+                    <div class="section-header fade-in">
+                        <h2 class="section-title">Соревнуйтесь в следующих направлениях</h2>
+                        <p class="section-subtitle">Выберите свой навык и продемонстрируйте наивысшее мастерство</p>
                     </div>
-                    <div class="about-card">
-                        <h3>
-                            <img src="assets/img/papyrus.png" alt="" class="card-icon-inline">
-                            <span data-i18n="about_card2_title">Аккредитация и сертификация</span>
-                        </h3>
-                        <p data-i18n="about_card2_desc">Подтверждение квалификации мастеров, судей и учебных центров по мировым стандартам.</p>
-                    </div>
-                    <div class="about-card">
-                        <h3>
-                            <img src="assets/img/top-three.png" alt="" class="card-icon-inline">
-                            <span data-i18n="about_card3_title">Единый накопительный рейтинг</span>
-                        </h3>
-                        <p data-i18n="about_card3_desc">Прозрачная система баллов для специалистов, фиксирующая достижения в сообществе.</p>
-                    </div>
-                </div>
 
-                <!-- Статистика -->
-                <div class="stats-grid fade-in">
-                    <div class="stat-item">
-                        <div class="stat-num">50+</div>
-                        <div class="stat-desc" data-i18n="stat_1">Проведенных чемпионатов</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-num">12 000+</div>
-                        <div class="stat-desc" data-i18n="stat_2">Аккредитованных мастеров</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-num">35</div>
-                        <div class="stat-desc" data-i18n="stat_3">Стран-участниц</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 2. БЛИЖАЙШИЕ ЧЕМПИОНАТЫ -->
-        <section id="events" class="events-section">
-            <div class="container">
-                <div class="section-header fade-in">
-                    <h2 class="section-title" data-i18n="events_title">Ближайшие чемпионаты</h2>
-                    <p class="section-subtitle" data-i18n="events_subtitle">Принимайте участие и зарабатывайте баллы в общий рейтинг</p>
-                </div>
-
-                <div class="events-grid">
-                    <div class="card fade-in">
-                        <div>
-                            <div class="card-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Championship" class="card-img">
-                                <span class="card-tag" data-i18n="card_1_tag">ОНЛАЙН / ОФЛАЙН</span>
-                            </div>
-                            <div class="card-content">
-                                <div class="card-date" data-i18n="card_1_date">15–18 Октября 2026</div>
-                                <h3>GABI Championship 2026</h3>
-                                <p data-i18n="card_1_desc">Международный чемпионат специалистов бьюти-индустрии и эстетической медицины.</p>
-                            </div>
+                    <div class="directions-grid fade-in">
+                        <div class="direction-card">
+                            <h3 data-i18n="dir1_title">Ногти</h3>
+                            <p data-i18n="dir1_desc">Проявите авторский подход в дизайне и маникюре, удивив судейскую коллегию высокой техникой и эстетикой исполнения.</p>
                         </div>
-                        <div class="card-footer">
-                            <span style="font-size: 0.8rem; color: var(--text-muted)" data-i18n="card_1_cat">Категории: Мастера</span>
-                            <a href="#" class="card-link" data-i18n="btn_more">Подробнее &rarr;</a>
+                        <div class="direction-card">
+                            <h3 data-i18n="dir2_title">Ресницы</h3>
+                            <p data-i18n="dir2_desc">Продемонстрируйте ювелирную точность в наращивании, ламинировании и моделировании взгляда.</p>
+                        </div>
+                        <div class="direction-card">
+                            <h3 data-i18n="dir3_title">Перманент</h3>
+                            <p data-i18n="dir3_desc">Раскройте профессионализм в перманентном макияже и архитектонике бровей, создавая гармоничные формы и линии.</p>
+                        </div>
+                        <div class="direction-card">
+                            <h3 data-i18n="dir4_title">Парикмахеры</h3>
+                            <p data-i18n="dir4_desc">Заявите о своем мастерстве через сложную техническую работу, стильные укладки и актуальные формы.</p>
+                        </div>
+                        <div class="direction-card">
+                            <h3 data-i18n="dir5_title">Макияж</h3>
+                            <p data-i18n="dir5_desc">Превратите визаж в искусство: создавайте выразительные образы, виртуозно подчёркивающие особенности модели.</p>
+                        </div>
+                        <div class="direction-card">
+                            <h3 data-i18n="dir6_title">Косметология</h3>
+                            <p data-i18n="dir6_desc">Покажите глубокое понимание эстетики кожи и владение передовыми методами ухода и коррекции.</p>
+                        </div>
+                        <div class="direction-card">
+                            <h3 data-i18n="dir7_title">Татуировки</h3>
+                            <p data-i18n="dir7_desc">Продемонстрируйте индивидуальный почерк и безупречную технику нанесения художественной татуировки любой сложности.</p>
+                        </div>
+                        <div class="direction-card">
+                            <h3 data-i18n="dir8_title">Handmade</h3>
+                            <p data-i18n="dir8_desc">Представьте свои эксклюзивные работы ручной работы, отражающие выдержанный стиль и аккуратность детализации.</p>
+                        </div>
+                        <div class="direction-card">
+                            <h3 data-i18n="dir9_title">Депиляция</h3>
+                            <p data-i18n="dir9_desc">Подтвердите высочайший класс проведения процедур, сочетающий атравматичность, скорость и идеальный результат.</p>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    <div class="card fade-in">
-                        <div>
-                            <div class="card-img-wrapper">
-                                <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=800&q=80" alt="Cup" class="card-img">
-                                <span class="card-tag" data-i18n="card_2_tag">МАРАФОН</span>
+            <!-- 2. БЛИЖАЙШИЕ ЧЕМПИОНАТЫ -->
+            <section id="events" class="events-section">
+                <div class="container">
+                    <div class="section-header fade-in">
+                        <h2 class="section-title" data-i18n="events_title">Ближайшие чемпионаты</h2>
+                        <p class="section-subtitle" data-i18n="events_subtitle">Принимайте участие и зарабатывайте баллы в общий рейтинг</p>
+                    </div>
+
+                    <div class="events-grid">
+                        <div class="card fade-in">
+                            <div>
+                                <div class="card-img-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Championship" class="card-img">
+                                    <span class="card-tag" data-i18n="card_1_tag">ОНЛАЙН / ОФЛАЙН</span>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-date" data-i18n="card_1_date">15–18 Октября 2026</div>
+                                    <h3>GABI Championship 2026</h3>
+                                    <p data-i18n="card_1_desc">Международный чемпионат специалистов бьюти-индустрии и эстетической медицины.</p>
+                                </div>
                             </div>
-                            <div class="card-content">
-                                <div class="card-date" data-i18n="card_2_date">01 Ноября 2026</div>
-                                <h3>IEEBA International Cup</h3>
-                                <p data-i18n="card_2_desc">Ежегодный кубок с участием международных судей и премиум-номинаций.</p>
+                            <div class="card-footer">
+                                <span style="font-size: 0.8rem; color: var(--text-muted)" data-i18n="card_1_cat">Категории: Все секции</span>
+                                <a href="events.html" class="card-link" data-i18n="btn_more">Подробнее &rarr;</a>
                             </div>
                         </div>
-                        <div class="card-footer">
-                            <span style="font-size: 0.8rem; color: var(--text-muted)" data-i18n="card_2_cat">Категории: Юниоры</span>
-                            <a href="#" class="card-link" data-i18n="btn_more">Подробнее &rarr;</a>
+
+                        <div class="card fade-in">
+                            <div>
+                                <div class="card-img-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=800&q=80" alt="Cup" class="card-img">
+                                    <span class="card-tag" data-i18n="card_2_tag">МАРАФОН</span>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-date" data-i18n="card_2_date">01 Ноября 2026</div>
+                                    <h3>IEEBA International Cup</h3>
+                                    <p data-i18n="card_2_desc">Ежегодный кубок с участием международных судей и премиум-номинаций.</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span style="font-size: 0.8rem; color: var(--text-muted)" data-i18n="card_2_cat">Категории: Юниоры / Профи</span>
+                                <a href="events.html" class="card-link" data-i18n="btn_more">Подробнее &rarr;</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- 3. ПРЕИМУЩЕСТВА -->
-        <section id="benefits" class="benefits-section">
-            <div class="container">
-                <div class="section-header fade-in">
-                    <h2 class="section-title" data-i18n="benefits_title">Преимущества членства</h2>
-                    <p class="section-subtitle" data-i18n="benefits_subtitle">Что дает вступление в ассоциацию GABI & IEEBA</p>
-                </div>
+            <!-- 3. ПРЕИМУЩЕСТВА -->
+            <section class="benefits-section">
+                <div class="container">
+                    <div class="section-header fade-in">
+                        <h2 class="section-title" data-i18n="benefits_title">Преимущества участия и членства</h2>
+                        <p class="section-subtitle" data-i18n="benefits_subtitle">Что дает вступление в ассоциацию GABI & IEEBA</p>
+                    </div>
 
-                <div class="benefits-grid fade-in">
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <img src="assets/img/globe.png" alt="" class="card-icon-top">
+                    <div class="benefits-grid fade-in">
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <img src="assets/img/globe.svg" alt="" class="card-icon-top">
+                            </div>
+                            <h3 data-i18n="b1_title">Международный статус</h3>
+                            <p data-i18n="b1_desc">Официальные дипломы и сертификаты, признаваемые экспертами по всему миру.</p>
                         </div>
-                        <h3 data-i18n="b1_title">Международный статус</h3>
-                        <p data-i18n="b1_desc">Официальные дипломы и сертификаты, признаваемые экспертами по всему миру.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <img src="assets/img/profit-growth.png" alt="" class="card-icon-top">
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <img src="assets/img/profit-growth.svg" alt="" class="card-icon-top">
+                            </div>
+                            <h3 data-i18n="b2_title">Рост в рейтинге</h3>
+                            <p data-i18n="b2_desc">Повышение личного бренда и привлечение клиентов за счет высокого рейтинга.</p>
                         </div>
-                        <h3 data-i18n="b2_title">Рост в рейтинге</h3>
-                        <p data-i18n="b2_desc">Повышение личного бренда и привлечение клиентов за счет высокого рейтинга.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <img src="assets/img/group.png" alt="" class="card-icon-top">
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <img src="assets/img/group.svg" alt="" class="card-icon-top">
+                            </div>
+                            <h3 data-i18n="b3_title">Закрытое сообщество</h3>
+                            <p data-i18n="b3_desc">Доступ к закрытым мастер-классам, обмену опытом и судейским коллегиям.</p>
                         </div>
-                        <h3 data-i18n="b3_title">Закрытое сообщество</h3>
-                        <p data-i18n="b3_desc">Доступ к закрытым мастер-классам, обмену опытом и судейским коллегиям.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <img src="assets/img/tag.png" alt="" class="card-icon-top">
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <img src="assets/img/tag.svg" alt="" class="card-icon-top">
+                            </div>
+                            <h3 data-i18n="b4_title">Скидки и льготы</h3>
+                            <p data-i18n="b4_desc">Специальные условия на участие во всех мероприятиях и покупку материалов партнерских брендов.</p>
                         </div>
-                        <h3 data-i18n="b4_title">Скидки и льготы</h3>
-                        <p data-i18n="b4_desc">Специальные условия на участие во всех мероприятиях и покупку материалов партнерских брендов.</p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- 4. ИЗБРАННЫЕ СПЕЦИАЛИСТЫ -->
-        <section id="specialists" class="specialists-section">
-            <div class="container">
-                <div class="section-header fade-in">
-                    <h2 class="section-title" data-i18n="spec_title">Избранные специалисты</h2>
-                    <p class="section-subtitle" data-i18n="spec_subtitle">Ведущие судьи, спикеры и амбассадоры нашей ассоциации</p>
-                </div>
-
-                <div class="specialists-grid fade-in">
-                    <div class="specialist-card">
-                        <div class="spec-avatar">АИ</div>
-                        <h3 data-i18n="spec1_name">Анна Ивановская</h3>
-                        <span class="spec-role" data-i18n="spec1_role">Главный судья GABI</span>
-                        <p class="spec-city" data-i18n="spec1_city">📍 Москва</p>
+            <!-- 4. СПЕЦИАЛИСТЫ И РЕЙТИНГ -->
+            <section class="specialists-section">
+                <div class="container">
+                    <div class="section-header fade-in">
+                        <h2 class="section-title" data-i18n="spec_title">Избранные специалисты и Топ рейтинга</h2>
+                        <p class="section-subtitle" data-i18n="spec_subtitle">Ведущие судьи, спикеры и лидеры накопительного рейтинга</p>
                     </div>
-                    <div class="specialist-card">
-                        <div class="spec-avatar">МП</div>
-                        <h3 data-i18n="spec2_name">Мария Петрова</h3>
-                        <span class="spec-role" data-i18n="spec2_role">Топ-мастер IEEBA</span>
-                        <p class="spec-city" data-i18n="spec2_city">📍 Санкт-Петербург</p>
+
+                    <div class="specialists-grid fade-in" style="margin-bottom: 40px;">
+                        <div class="specialist-card">
+                            <div class="spec-avatar">АИ</div>
+                            <h3 data-i18n="spec1_name">Анна Ивановская</h3>
+                            <span class="spec-role" data-i18n="spec1_role">Главный судья GABI</span>
+                            <p class="spec-city" data-i18n="spec1_city">📍 Москва</p>
+                        </div>
+                        <div class="specialist-card">
+                            <div class="spec-avatar">МП</div>
+                            <h3 data-i18n="spec2_name">Мария Петрова</h3>
+                            <span class="spec-role" data-i18n="spec2_role">Топ-мастер IEEBA</span>
+                            <p class="spec-city" data-i18n="spec2_city">📍 Санкт-Петербург</p>
+                        </div>
+                        <div class="specialist-card">
+                            <div class="spec-avatar">ЕК</div>
+                            <h3 data-i18n="spec3_name">Елена Ковалева</h3>
+                            <span class="spec-role" data-i18n="spec3_role">Международный спикер</span>
+                            <p class="spec-city" data-i18n="spec3_city">📍 Минск</p>
+                        </div>
                     </div>
-                    <div class="specialist-card">
-                        <div class="spec-avatar">ЕК</div>
-                        <h3 data-i18n="spec3_name">Елена Ковалева</h3>
-                        <span class="spec-role" data-i18n="spec3_role">Международный спикер</span>
-                        <p class="spec-city" data-i18n="spec3_city">📍 Минск</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- 5. РЕЙТИНГ -->
-        <section id="rating" class="rating-section">
-            <div class="container">
-                <div class="section-header fade-in">
-                    <h2 class="section-title" data-i18n="rating_title">Рейтинг специалистов</h2>
-                    <p class="section-subtitle" data-i18n="rating_subtitle">Накопительный рейтинг на основе результатов аккредитованных чемпионатов</p>
-                </div>
-
-                <div class="rating-table-wrapper fade-in">
-                    <table class="rating-table">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th data-i18n="th_name">Специалист</th>
-                                <th data-i18n="th_status">Статус</th>
-                                <th style="text-align: right;" data-i18n="th_score">Баллы</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="rank-num">1</td>
-                                <td>
-                                    <div class="specialist-info">
-                                        <div class="avatar-placeholder">АИ</div>
-                                        <span data-i18n="spec1_name">Анна Ивановская</span>
-                                    </div>
-                                </td>
-                                <td><span class="status-badge" data-i18n="rank1_status">Судья / Тренер</span></td>
-                                <td class="score">384.5</td>
-                            </tr>
-                            <tr>
-                                <td class="rank-num" style="color: var(--text-muted)">2</td>
-                                <td>
-                                    <div class="specialist-info">
-                                        <div class="avatar-placeholder">МП</div>
-                                        <span data-i18n="spec2_name">Мария Петрова</span>
-                                    </div>
-                                </td>
-                                <td><span class="status-badge" data-i18n="rank2_status">Мастер</span></td>
-                                <td class="score">291.0</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. НОВОСТИ -->
-        <section id="news" class="news-section">
-            <div class="container">
-                <div class="section-header fade-in">
-                    <h2 class="section-title" data-i18n="news_title">Последние новости</h2>
-                    <p class="section-subtitle" data-i18n="news_subtitle">События, анонсы и изменения в регламенте</p>
-                </div>
-
-                <div class="news-grid fade-in">
-                    <article class="news-card">
-                        <span class="news-date" data-i18n="news1_date">10 Сен 2026</span>
-                        <h3 data-i18n="news1_title">Обновление правил аккредитации на 2027 год</h3>
-                        <p data-i18n="news1_desc">Внесены изменения в систему подсчета баллов для судейской коллегии.</p>
-                        <a href="#" class="card-link" data-i18n="btn_read_more">Читать далее &rarr;</a>
-                    </article>
-                    <article class="news-card">
-                        <span class="news-date" data-i18n="news2_date">02 Сен 2026</span>
-                        <h3 data-i18n="news2_title">Итоги летнего кубка IEEBA Cup</h3>
-                        <p data-i18n="news2_desc">Поздравляем победителей и призеров грандиозного летнего сезона!</p>
-                        <a href="#" class="card-link" data-i18n="btn_read_more">Читать далее &rarr;</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. CTA BLOCK -->
-        <section class="cta-section">
-            <div class="container fade-in">
-                <div class="cta-box">
-                    <h2 data-i18n="cta_title">Готовы присоединиться к ассоциации?</h2>
-                    <p data-i18n="cta_desc">Зарегистрируйтесь прямо сейчас, чтобы участвовать в чемпионатах, повышать свой статус и войти в международный рейтинг.</p>
-                    <div class="cta-buttons">
-                        <a href="#" class="btn-primary" data-i18n="cta_btn_join">Стать членом ассоциации</a>
-                        <a href="contacts.html" class="btn-secondary" data-i18n="cta_btn_ask">Задать вопрос</a>
+                    <div class="rating-table-wrapper fade-in">
+                        <table class="rating-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th data-i18n="th_name">Специалист</th>
+                                    <th data-i18n="th_status">Статус / Направление</th>
+                                    <th style="text-align: right;" data-i18n="th_score">Баллы</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="rank-num">1</td>
+                                    <td>
+                                        <div class="specialist-info">
+                                            <div class="avatar-placeholder">АИ</div>
+                                            <span data-i18n="spec1_name">Анна Ивановская</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="status-badge" data-i18n="rank1_status">Судья / Перманент</span></td>
+                                    <td class="score">384.5</td>
+                                </tr>
+                                <tr>
+                                    <td class="rank-num" style="color: var(--text-muted)">2</td>
+                                    <td>
+                                        <div class="specialist-info">
+                                            <div class="avatar-placeholder">МП</div>
+                                            <span data-i18n="spec2_name">Мария Петрова</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="status-badge" data-i18n="rank2_status">Мастер / Ногти</span></td>
+                                    <td class="score">291.0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="text-align: center; padding: 15px;">
+                            <a href="rating.html" class="card-link">Посмотреть полный рейтинг &rarr;</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <!-- 5. НОВОСТИ -->
+            <section class="news-section">
+                <div class="container">
+                    <div class="section-header fade-in">
+                        <h2 class="section-title" data-i18n="news_title">Последние новости</h2>
+                        <p class="section-subtitle" data-i18n="news_subtitle">События, анонсы и изменения в регламенте</p>
+                    </div>
+
+                    <div class="news-grid fade-in">
+                        <article class="news-card">
+                            <span class="news-date" data-i18n="news1_date">10 Сен 2026</span>
+                            <h3 data-i18n="news1_title">Обновление правил аккредитации на 2027 год</h3>
+                            <p data-i18n="news1_desc">Внесены изменения в систему подсчета баллов для судейской коллегии.</p>
+                            <a href="news.html" class="card-link" data-i18n="btn_read_more">Читать далее &rarr;</a>
+                        </article>
+                        <article class="news-card">
+                            <span class="news-date" data-i18n="news2_date">02 Сен 2026</span>
+                            <h3 data-i18n="news2_title">Итоги летнего кубка IEEBA Cup</h3>
+                            <p data-i18n="news2_desc">Поздравляем победителей и призеров грандиозного летнего сезона!</p>
+                            <a href="news.html" class="card-link" data-i18n="btn_read_more">Читать далее &rarr;</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. CTA -->
+            <section class="cta-section">
+                <div class="container fade-in">
+                    <div class="cta-box">
+                        <h2 data-i18n="cta_title">Готовы присоединиться к ассоциации?</h2>
+                        <p data-i18n="cta_desc">Зарегистрируйтесь прямо сейчас, чтобы участвовать в чемпионатах, повышать свой статус и войти в международный рейтинг.</p>
+                        <div class="cta-buttons">
+                            <a href="#" class="btn-primary" data-i18n="cta_btn_join">Зарегистрироваться</a>
+                            <a href="accreditation.html" class="btn-secondary" data-i18n="cta_btn_ask">Подать заявку на аккредитацию</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ПОДВАЛ (ТАКИЖЕ ВНУТРИ СЛОЯ НАПЛЫВА) -->
+            <footer class="footer">
+                <div class="container footer-content">
+                    <div class="footer-info">
+                        <a href="main.html" class="logo">GABI & IEEBA</a>
+                        <p style="margin-top: 10px; max-width: 300px;" data-i18n="footer_desc">Международная ассоциация бьюти-специалистов и экспертов эстетической медицины.</p>
+                    </div>
+
+                    <div class="footer-contacts">
+                        <h4 data-i18n="footer_contacts_title">Контактные данные</h4>
+                        <p data-i18n="footer_address">📍 г. Москва, ул. Пресненская наб., д. 12</p>
+                        <p>✉️ info@gabi-ieeba.org</p>
+                        <p>📞 +7 (800) 555-35-35</p>
+                    </div>
+
+                    <div class="footer-socials">
+                        <h4 data-i18n="footer_socials_title">Социальные сети</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-btn">Telegram</a>
+                            <a href="#" class="social-btn">VKontakte</a>
+                            <a href="#" class="social-btn">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container footer-bottom">
+                    <p>&copy; 2026 GABI & IEEBA Association. <span data-i18n="footer_rights">Все права защищены.</span></p>
+                    <a href="documents.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.8rem;" data-i18n="privacy_policy">Политика конфиденциальности</a>
+                </div>
+            </footer>
+
+        </div> <!-- /content-overlay -->
     </main>
-
-    <!-- ПОДВАЛ -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-info">
-                <a href="main.html" class="logo">GABI & IEEBA</a>
-                <p style="margin-top: 10px; max-width: 300px;" data-i18n="footer_desc">Международная ассоциация бьюти-специалистов и экспертов эстетической медицины.</p>
-            </div>
-
-            <div class="footer-contacts">
-                <h4 data-i18n="footer_contacts_title">Контакты</h4>
-                <p data-i18n="footer_address">📍 г. Москва, ул. Пресненская наб., д. 12</p>
-                <p>✉️ info@gabi-ieeba.org</p>
-                <p>📞 +7 (800) 555-35-35</p>
-            </div>
-
-            <div class="footer-socials">
-                <h4 data-i18n="footer_socials_title">Мы в соцсетях</h4>
-                <div class="social-links">
-                    <a href="#" class="social-btn">Telegram</a>
-                    <a href="#" class="social-btn">VKontakte</a>
-                    <a href="#" class="social-btn">Instagram</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="container footer-bottom">
-            <p>&copy; 2026 GABI & IEEBA Association. <span data-i18n="footer_rights">Все права защищены.</span></p>
-            <a href="#" style="color: var(--text-muted); text-decoration: none; font-size: 0.8rem;" data-i18n="privacy_policy">Политика конфиденциальности</a>
-        </div>
-    </footer>
 
     <script src="assets/js/main.js"></script>
 </body>

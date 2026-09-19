@@ -16,10 +16,28 @@
             <a href="main.html" class="logo">GABI & IEEBA</a>
             
             <nav class="nav">
-                <a href="main.html#about" data-i18n="nav_about">Об ассоциации</a>
-                <a href="main.html#events" data-i18n="nav_events">Чемпионаты</a>
-                <a href="main.html#specialists" data-i18n="nav_specialists">Специалисты</a>
-                <a href="main.html#rating" data-i18n="nav_rating">Рейтинг</a>
+                <a href="about.html" data-i18n="nav_about">Об ассоциации</a>
+                
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle"><span data-i18n="nav_participation">Участие</span> <span class="arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="membership.html" data-i18n="nav_membership">Членство</a>
+                        <a href="accreditation.html" data-i18n="nav_accreditation">Аккредитация</a>
+                        <a href="events.html" data-i18n="nav_events_all">Чемпионаты и мероприятия</a>
+                    </div>
+                </div>
+
+                <a href="specialists.html" data-i18n="nav_specialists">Специалисты</a>
+                <a href="rating.html" data-i18n="nav_rating">Рейтинг</a>
+
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle"><span data-i18n="nav_info">Информация</span> <span class="arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="news.html" data-i18n="nav_news">Новости</a>
+                        <a href="documents.html" data-i18n="nav_docs">Документы</a>
+                    </div>
+                </div>
+
                 <a href="contacts.html" data-i18n="nav_contacts">Контакты</a>
             </nav>
 
@@ -28,7 +46,7 @@
                     <button class="lang-btn active" onclick="changeLanguage('ru')">RU</button>
                     <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
                 </div>
-                <a href="#" class="btn-login" data-i18n="btn_login">Войти</a>
+                <a href="#" class="btn-login" data-i18n="btn_login">Личный кабинет</a>
             </div>
         </div>
     </header>
