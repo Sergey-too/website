@@ -168,20 +168,19 @@ function changeLanguage(lang) {
         btn.classList.toggle('active', btnOnClick.includes(`'${lang}'`));
     });
 
-    // 3. Находим ВСЕ элементы с data-i18n на странице (включая контент и подвал)
+    // 3. Находим ВСЕ элементы с data-i18n на странице
     const elements = document.querySelectorAll('[data-i18n]');
     
     elements.forEach(element => {
         const key = element.getAttribute('data-i18n');
         
         if (translations[lang] && translations[lang][key]) {
-            // Переводим текстовое содержимое
             element.textContent = translations[lang][key];
         }
     });
 }
 
-// Запускаем переключение после полной загрузки DOM-дерева
+// Запуск при загрузке страницы
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         const currentLang = localStorage.getItem('selectedLang') || 'ru';
@@ -191,8 +190,3 @@ if (document.readyState === 'loading') {
     const currentLang = localStorage.getItem('selectedLang') || 'ru';
     changeLanguage(currentLang);
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    const currentLang = localStorage.getItem('selectedLang') || 'ru';
-    changeLanguage(currentLang);
-});

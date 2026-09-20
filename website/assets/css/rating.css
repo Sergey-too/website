@@ -1,0 +1,300 @@
+/* ==========================================================================
+   1. ПАНЕЛЬ ФИЛЬТРОВ (Dark UI)
+   ========================================================================== */
+
+.filter-panel {
+    background: #0f172a; /* Глубокий тёмно-синий фон */
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 32px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Шапка фильтра */
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #1e293b;
+}
+
+.filter-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #38bdf8;
+}
+
+.filter-title h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+/* Кнопка сброса */
+.btn-reset {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #1e293b;
+    color: #94a3b8;
+    border: 1px solid #334155;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-reset:hover {
+    background: #334155;
+    color: #ffffff;
+    border-color: #475569;
+}
+
+/* Поиск */
+.filter-search-box {
+    margin-bottom: 20px;
+}
+
+.input-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 14px;
+    color: #64748b;
+    pointer-events: none;
+}
+
+/* Сетка полей ввода (4 колонки) */
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-group label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #94a3b8;
+}
+
+/* Элементы ввода */
+.filter-group input[type="text"],
+.filter-group select {
+    width: 100% !important;
+    height: 44px !important;
+    background-color: #1e293b !important;
+    border: 1px solid #334155 !important;
+    border-radius: 10px !important;
+    color: #f8fafc !important;
+    font-size: 0.9rem !important;
+    padding: 0 14px !important;
+    outline: none !important;
+    box-sizing: border-box !important;
+    transition: all 0.2s ease !important;
+}
+
+.input-icon-wrapper input[type="text"] {
+    padding-left: 42px !important;
+}
+
+.filter-group input::placeholder {
+    color: #64748b;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+    border-color: #38bdf8 !important;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15) !important;
+    background-color: #0f172a !important;
+}
+
+/* Выпадающий список */
+.filter-group select {
+    cursor: pointer !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%3C%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 14px center !important;
+    padding-right: 38px !important;
+}
+
+.filter-group select option {
+    background-color: #1e293b;
+    color: #f8fafc;
+}
+
+/* ==========================================================================
+   2. ТАБЛИЦА РЕЙТИНГА
+   ========================================================================== */
+
+.rating-table-wrapper {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.rating-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.rating-table th {
+    background: #1e293b;
+    color: #94a3b8;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 16px 20px;
+    border-bottom: 1px solid #334155;
+}
+
+.rating-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #1e293b;
+    color: #e2e8f0;
+    vertical-align: middle;
+}
+
+.rating-row:hover {
+    background: rgba(56, 189, 248, 0.03);
+}
+
+/* Бейджи мест (Золото, Серебро, Бронза) */
+.rank-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.rank-badge.gold { background: linear-gradient(135deg, #f59e0b, #d97706); color: #fff; }
+.rank-badge.silver { background: linear-gradient(135deg, #94a3b8, #64748b); color: #fff; }
+.rank-badge.bronze { background: linear-gradient(135deg, #b45309, #78350f); color: #fff; }
+.rank-badge.plain { background: #1e293b; color: #64748b; }
+
+/* Карточка специалиста в таблице */
+.specialist-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-placeholder {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #334155;
+    color: #38bdf8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.spec-name {
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+.spec-role-tag {
+    font-size: 0.75rem;
+    color: #38bdf8;
+}
+
+.spec-meta-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.meta-main {
+    font-weight: 500;
+    color: #f1f5f9;
+}
+
+.meta-sub {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+.achievements-list {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+}
+
+.points-cell {
+    text-align: right;
+}
+
+.points-val {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #38bdf8;
+}
+
+.points-lbl {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+.no-results {
+    text-align: center;
+    padding: 40px;
+    color: #94a3b8;
+}
+
+/* ==========================================================================
+   3. АДАПТИВНОСТЬ
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .filter-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .filter-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .rating-table-wrapper {
+        overflow-x: auto;
+    }
+}

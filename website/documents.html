@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GABI & IEEBA — Документы</title>
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/documents.css">
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="main.html" class="logo">GABI & IEEBA</a>
+            
+            <nav class="nav">
+                <a href="about.html" data-i18n="nav_about">Об ассоциации</a>
+                
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle"><span data-i18n="nav_participation">Участие</span> <span class="arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="membership.html" data-i18n="nav_membership">Членство</a>
+                        <a href="accreditation.html" data-i18n="nav_accreditation">Аккредитация</a>
+                        <a href="events.html" data-i18n="nav_events_all">Чемпионаты и мероприятия</a>
+                    </div>
+                </div>
+
+                <a href="specialists.html" data-i18n="nav_specialists">Специалисты</a>
+                <a href="rating.html" data-i18n="nav_rating">Рейтинг</a>
+
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle"><span data-i18n="nav_info">Информация</span> <span class="arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="news.html" data-i18n="nav_news">Новости</a>
+                        <a href="documents.html" data-i18n="nav_docs">Документы</a>
+                    </div>
+                </div>
+
+                <a href="contacts.html" data-i18n="nav_contacts">Контакты</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" onclick="changeLanguage('ru')">RU</button>
+                    <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                </div>
+                <a href="#" class="btn-login" data-i18n="btn_login">Личный кабинет</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO СЕКЦИЯ -->
+        <section class="hero page-hero hero-sticky">
+            <div class="hero-bg-overlay"></div>
+            <div class="container fade-in hero-container">
+                <span class="hero-badge" data-i18n="docs_hero_badge">Информация</span>
+                <h1><span data-i18n="docs_hero_title">Официальные документы</span><br><span class="highlight">GABI & IEEBA</span></h1>
+                <p data-i18n="docs_hero_desc">Регламенты, положения, стандарты аккредитации и бланки заявок, доступные для ознакомления и скачивания.</p>
+            </div>
+        </section>
+
+        <!-- ОБЕРТКА ДЛЯ НАПЛЫВАЮЩЕГО СЛОЯ -->
+        <div class="content-overlay">
+
+            <!-- КАТЕГОРИИ И СПИСОК ДОКУМЕНТОВ -->
+            <section class="documents-section">
+                <div class="container">
+
+                    <!-- Регламенты и Правила -->
+                    <div class="docs-category fade-in">
+                        <div class="category-header">
+                            <span class="category-icon">📜</span>
+                            <div>
+                                <h2 data-i18n="cat_regulations_title">Регламенты и правила соревнований</h2>
+                                <p data-i18n="cat_regulations_desc">Официальные документы, регулирующие порядок проведения чемпионатов и судейство</p>
+                            </div>
+                        </div>
+
+                        <div class="docs-grid">
+                            <div class="doc-card">
+                                <div class="doc-icon">PDF</div>
+                                <div class="doc-info">
+                                    <h3 data-i18n="doc1_title">Общий регламент чемпионатов GABI 2026</h3>
+                                    <span class="doc-meta">PDF • 2.4 MB • <span data-i18n="doc_updated">Обновлено: Январь 2026</span></span>
+                                </div>
+                                <a href="assets/docs/general_regulations_2026.pdf" download class="btn-download" data-i18n="btn_download">Скачать</a>
+                            </div>
+
+                            <div class="doc-card">
+                                <div class="doc-icon">PDF</div>
+                                <div class="doc-info">
+                                    <h3 data-i18n="doc2_title">Кодекс судейской этики и правила оценивания IEEBA</h3>
+                                    <span class="doc-meta">PDF • 1.8 MB • <span data-i18n="doc_updated">Обновлено: Февраль 2026</span></span>
+                                </div>
+                                <a href="assets/docs/judge_code_ieeba.pdf" download class="btn-download" data-i18n="btn_download">Скачать</a>
+                            </div>
+
+                            <div class="doc-card">
+                                <div class="doc-icon">PDF</div>
+                                <div class="doc-info">
+                                    <h3 data-i18n="doc3_title">Положение о подаче апелляций и протестов</h3>
+                                    <span class="doc-meta">PDF • 1.1 MB • <span data-i18n="doc_updated">Обновлено: Январь 2026</span></span>
+                                </div>
+                                <a href="assets/docs/appeals_policy.pdf" download class="btn-download" data-i18n="btn_download">Скачать</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Аккредитация и Стандарты -->
+                    <div class="docs-category fade-in">
+                        <div class="category-header">
+                            <span class="category-icon">🎓</span>
+                            <div>
+                                <h2 data-i18n="cat_accreditation_title">Аккредитация и членство</h2>
+                                <p data-i18n="cat_accreditation_desc">Требования к специалистам, судейской коллегии и учебным центрам</p>
+                            </div>
+                        </div>
+
+                        <div class="docs-grid">
+                            <div class="doc-card">
+                                <div class="doc-icon">PDF</div>
+                                <div class="doc-info">
+                                    <h3 data-i18n="doc4_title">Стандарты аккредитации бьюти-школ и академий</h3>
+                                    <span class="doc-meta">PDF • 3.1 MB • <span data-i18n="doc_updated">Обновлено: Март 2026</span></span>
+                                </div>
+                                <a href="assets/docs/accreditation_schools.pdf" download class="btn-download" data-i18n="btn_download">Скачать</a>
+                            </div>
+
+                            <div class="doc-card">
+                                <div class="doc-icon">DOCX</div>
+                                <div class="doc-info">
+                                    <h3 data-i18n="doc5_title">Положение о статусе международного судьи GABI</h3>
+                                    <span class="doc-meta">DOCX • 850 KB • <span data-i18n="doc_updated">Обновлено: Февраль 2026</span></span>
+                                </div>
+                                <a href="assets/docs/international_judge_status.docx" download class="btn-download" data-i18n="btn_download">Скачать</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Заявки и Бланки -->
+                    <div class="docs-category fade-in">
+                        <div class="category-header">
+                            <span class="category-icon">📁</span>
+                            <div>
+                                <h2 data-i18n="cat_forms_title">Бланки и формы заявок</h2>
+                                <p data-i18n="cat_forms_desc">Шаблоны документов для заполнения и отправки в оргкомитет</p>
+                            </div>
+                        </div>
+
+                        <div class="docs-grid">
+                            <div class="doc-card">
+                                <div class="doc-icon">DOCX</div>
+                                <div class="doc-info">
+                                    <h3 data-i18n="doc6_title">Заявление на вступление в ассоциацию (физ. лица)</h3>
+                                    <span class="doc-meta">DOCX • 420 KB • <span data-i18n="doc_updated">Обновлено: Январь 2026</span></span>
+                                </div>
+                                <a href="assets/docs/membership_application.docx" download class="btn-download" data-i18n="btn_download">Скачать</a>
+                            </div>
+
+                            <div class="doc-card">
+                                <div class="doc-icon">DOCX</div>
+                                <div class="doc-info">
+                                    <h3 data-i18n="doc7_title">Анкета на аккредитацию учебного центра</h3>
+                                    <span class="doc-meta">DOCX • 510 KB • <span data-i18n="doc_updated">Обновлено: Январь 2026</span></span>
+                                </div>
+                                <a href="assets/docs/school_accreditation_form.docx" download class="btn-download" data-i18n="btn_download">Скачать</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- CTA BLOCK -->
+            <section class="cta-section">
+                <div class="container fade-in">
+                    <div class="cta-box">
+                        <h2 data-i18n="docs_cta_title">Не нашли нужный документ?</h2>
+                        <p data-i18n="docs_cta_desc">Отправьте запрос в юридический отдел или оргкомитет ассоциации, и мы предоставим необходимую информацию.</p>
+                        <div class="cta-buttons">
+                            <a href="contacts.html" class="btn-primary" data-i18n="cta_btn_contact">Запросить документ</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ПОДВАЛ -->
+            <footer class="footer">
+                <div class="container footer-content">
+                    <div class="footer-info">
+                        <a href="main.html" class="logo">GABI & IEEBA</a>
+                        <p style="margin-top: 10px; max-width: 300px;" data-i18n="footer_desc">Международная ассоциация бьюти-специалистов и экспертов эстетической медицины.</p>
+                    </div>
+
+                    <div class="footer-contacts">
+                        <h4 data-i18n="footer_contacts_title">Контакты</h4>
+                        <p data-i18n="footer_address">📍 г. Москва, ул. Пресненская наб., д. 12</p>
+                        <p>✉️ info@gabi-ieeba.org</p>
+                        <p>📞 +7 (800) 555-35-35</p>
+                    </div>
+
+                    <div class="footer-socials">
+                        <h4 data-i18n="footer_socials_title">Мы в соцсетях</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-btn">Telegram</a>
+                            <a href="#" class="social-btn">VKontakte</a>
+                            <a href="#" class="social-btn">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container footer-bottom">
+                    <p>&copy; 2026 GABI & IEEBA Association. <span data-i18n="footer_rights">Все права защищены.</span></p>
+                    <a href="#" style="color: var(--text-muted); text-decoration: none; font-size: 0.8rem;" data-i18n="privacy_policy">Политика конфиденциальности</a>
+                </div>
+            </footer>
+
+        </div> 
+    </main>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/documents.js"></script>
+</body>
+</html>

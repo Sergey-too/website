@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GABI & IEEBA — Рейтинг специалистов</title>
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/rating.css">
+    <style>
+        /* Выравнивание заголовка HERO по центру */
+        .page-hero {
+            text-align: center;
+            padding: 40px 0 20px;
+        }
+
+        .page-hero h1 {
+            display: inline-block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="main.html" class="logo">GABI & IEEBA</a>
+            
+            <nav class="nav">
+                <a href="about.html" data-i18n="nav_about">Об ассоциации</a>
+                
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle"><span data-i18n="nav_participation">Участие</span> <span class="arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="membership.html" data-i18n="nav_membership">Членство</a>
+                        <a href="accreditation.html" data-i18n="nav_accreditation">Аккредитация</a>
+                        <a href="events.html" data-i18n="nav_events_all">Чемпионаты и мероприятия</a>
+                    </div>
+                </div>
+
+                <a href="specialists.html" data-i18n="nav_specialists">Специалисты</a>
+                <a href="rating.html" class="active" data-i18n="nav_rating">Рейтинг</a>
+
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle"><span data-i18n="nav_info">Информация</span> <span class="arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="news.html" data-i18n="nav_news">Новости</a>
+                        <a href="documents.html" data-i18n="nav_docs">Документы</a>
+                    </div>
+                </div>
+
+                <a href="contacts.html" data-i18n="nav_contacts">Контакты</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <a href="#" class="btn-login" data-i18n="btn_login">Личный кабинет</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO СЕКЦИЯ -->
+        <section class="page-hero">
+            <div class="container fade-in">
+                <h1><span data-i18n="rating_hero_title">Общий рейтинг специалистов</span></h1>
+            </div>
+        </section>
+
+        <!-- СЕКЦИЯ РЕЙТИНГА С ФИЛЬТРАМИ -->
+        <section class="rating-section">
+            <div class="container">
+
+                <!-- ПАНЕЛЬ ФИЛЬТРОВ -->
+                <div class="filter-panel">
+                    <!-- Шапка фильтра -->
+                    <div class="filter-header">
+                        <div class="filter-title">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                            </svg>
+                            <h3 data-i18n="filter_title">Фильтрация рейтинга</h3>
+                        </div>
+                        <button type="button" id="resetFilters" class="btn-reset">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                                <path d="M3 3v5h5"></path>
+                            </svg>
+                            <span data-i18n="filter_reset">Сбросить всё</span>
+                        </button>
+                    </div>
+
+                    <!-- Поиск по имени -->
+                    <div class="filter-search-box">
+                        <div class="filter-group">
+                            <label for="searchName" data-i18n="filter_label_search">Поиск специалиста</label>
+                            <div class="input-icon-wrapper">
+                                <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                                <input type="text" id="searchName" placeholder="Введите имя или фамилию..." data-i18n="filter_ph_search">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Сетка выпадающих списков -->
+                    <div class="filter-grid">
+                        <div class="filter-group">
+                            <label for="filterRole" data-i18n="filter_label_role">Роль / Статус</label>
+                            <select id="filterRole">
+                                <option value="all" data-i18n="opt_all_roles">Все роли</option>
+                                <option value="master" data-i18n="opt_role_master">Мастер / Участник</option>
+                                <option value="top_master" data-i18n="opt_role_top">Топ-мастер</option>
+                                <option value="judge" data-i18n="opt_role_judge">Судья международной категории</option>
+                                <option value="speaker" data-i18n="opt_role_speaker">Спикер / Тренер</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="filterDirection" data-i18n="filter_label_direction">Направление</label>
+                            <select id="filterDirection">
+                                <option value="all" data-i18n="opt_all_directions">Все направления</option>
+                                <option value="pm" data-i18n="opt_dir_pm">Перманентный макияж</option>
+                                <option value="cosmetology" data-i18n="opt_dir_cosmetology">Эстетическая косметология</option>
+                                <option value="lashes" data-i18n="opt_dir_lashes">Lash & Brow</option>
+                                <option value="nails" data-i18n="opt_dir_nails">Nail-сервис</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="filterSection" data-i18n="filter_label_section">Секция</label>
+                            <select id="filterSection">
+                                <option value="all" data-i18n="opt_all_sections">Все секции</option>
+                                <option value="championship" data-i18n="opt_sec_championship">Чемпионатная секция</option>
+                                <option value="educational" data-i18n="opt_sec_educational">Образовательная секция</option>
+                                <option value="expert" data-i18n="opt_sec_expert">Экспертная коллегия</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="filterCategory" data-i18n="filter_label_category">Категория участника</label>
+                            <select id="filterCategory">
+                                <option value="all" data-i18n="opt_all_categories">Все категории</option>
+                                <option value="junior" data-i18n="opt_cat_junior">Юниор (опыт до 1 года)</option>
+                                <option value="master" data-i18n="opt_cat_master">Мастер (опыт 1-3 года)</option>
+                                <option value="profi" data-i18n="opt_cat_profi">Профи (опыт от 3 лет)</option>
+                                <option value="grand" data-i18n="opt_cat_grand">Гранд-эксперт</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ТАБЛИЦА РЕЙТИНГА -->
+                <div class="rating-table-wrapper fade-in">
+                    <table class="rating-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 80px;" data-i18n="th_rank">Место</th>
+                                <th data-i18n="th_specialist">Специалист</th>
+                                <th data-i18n="th_details">Направление и категория</th>
+                                <th data-i18n="th_achievements">Основные достижения</th>
+                                <th style="width: 140px; text-align: right;" data-i18n="th_points">Баллы</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ratingTableBody">
+                            <tr class="rating-row rank-1" data-role="judge" data-direction="pm" data-section="expert" data-category="grand">
+                                <td class="rank-cell"><div class="rank-badge gold">1</div></td>
+                                <td>
+                                    <div class="specialist-info">
+                                        <div class="avatar-placeholder">АК</div>
+                                        <div>
+                                            <div class="spec-name">Анна Ковалева</div>
+                                            <div class="spec-role-tag" data-i18n="tag_role_judge">Судья международной категории</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="spec-meta-block">
+                                        <span class="meta-main" data-i18n="opt_dir_pm">Перманентный макияж</span>
+                                        <span class="meta-sub" data-i18n="opt_cat_grand">Гранд-эксперт</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <ul class="achievements-list">
+                                        <li data-i18n="ach_1_1">🏆 Гран-при "GABI World Cup 2025"</li>
+                                        <li data-i18n="ach_1_2">⭐ Главный судья чемпионата в Дубае</li>
+                                    </ul>
+                                </td>
+                                <td class="points-cell">
+                                    <span class="points-val">4,850</span>
+                                    <span class="points-lbl" data-i18n="lbl_pts">баллов</span>
+                                </td>
+                            </tr>
+                            <tr class="rating-row rank-2" data-role="top_master" data-direction="cosmetology" data-section="championship" data-category="profi">
+                                <td class="rank-cell"><div class="rank-badge silver">2</div></td>
+                                <td>
+                                    <div class="specialist-info">
+                                        <div class="avatar-placeholder">ЕС</div>
+                                        <div>
+                                            <div class="spec-name">Елена Смирнова</div>
+                                            <div class="spec-role-tag" data-i18n="opt_role_top">Топ-мастер</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="spec-meta-block">
+                                        <span class="meta-main" data-i18n="opt_dir_cosmetology">Эстетическая косметология</span>
+                                        <span class="meta-sub" data-i18n="opt_cat_profi">Профи</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <ul class="achievements-list">
+                                        <li data-i18n="ach_2_1">🥇 1 место в номинации "Aesthetic Care 2025"</li>
+                                        <li data-i18n="ach_2_2">📜 Аккредитованный спикер IEEBA</li>
+                                    </ul>
+                                </td>
+                                <td class="points-cell">
+                                    <span class="points-val">4,210</span>
+                                    <span class="points-lbl" data-i18n="lbl_pts">баллов</span>
+                                </td>
+                            </tr>
+                            <tr class="rating-row rank-3" data-role="speaker" data-direction="lashes" data-section="educational" data-category="profi">
+                                <td class="rank-cell"><div class="rank-badge bronze">3</div></td>
+                                <td>
+                                    <div class="specialist-info">
+                                        <div class="avatar-placeholder">МВ</div>
+                                        <div>
+                                            <div class="spec-name">Мария Васильева</div>
+                                            <div class="spec-role-tag" data-i18n="opt_role_speaker">Спикер / Тренер</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="spec-meta-block">
+                                        <span class="meta-main" data-i18n="opt_dir_lashes">Lash & Brow</span>
+                                        <span class="meta-sub" data-i18n="opt_cat_profi">Профи</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <ul class="achievements-list">
+                                        <li data-i18n="ach_3_1">🥇 1 место "Lash Star Marathon 2025"</li>
+                                        <li data-i18n="ach_3_2">🎓 Автор 5 международных курсов</li>
+                                    </ul>
+                                </td>
+                                <td class="points-cell">
+                                    <span class="points-val">3,940</span>
+                                    <span class="points-lbl" data-i18n="lbl_pts">баллов</span>
+                                </td>
+                            </tr>
+                            <tr class="rating-row" data-role="master" data-direction="nails" data-section="championship" data-category="master">
+                                <td class="rank-cell"><div class="rank-badge plain">4</div></td>
+                                <td>
+                                    <div class="specialist-info">
+                                        <div class="avatar-placeholder">ДП</div>
+                                        <div>
+                                            <div class="spec-name">Дмитрий Петров</div>
+                                            <div class="spec-role-tag" data-i18n="opt_role_master">Мастер</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="spec-meta-block">
+                                        <span class="meta-main" data-i18n="opt_dir_nails">Nail-сервис</span>
+                                        <span class="meta-sub" data-i18n="opt_cat_master">Мастер</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <ul class="achievements-list">
+                                        <li data-i18n="ach_4_1">🥈 2 место "Nail Design Championship 2025"</li>
+                                    </ul>
+                                </td>
+                                <td class="points-cell">
+                                    <span class="points-val">3,120</span>
+                                    <span class="points-lbl" data-i18n="lbl_pts">баллов</span>
+                                </td>
+                            </tr>
+                            <tr class="rating-row" data-role="master" data-direction="pm" data-section="championship" data-category="junior">
+                                <td class="rank-cell"><div class="rank-badge plain">5</div></td>
+                                <td>
+                                    <div class="specialist-info">
+                                        <div class="avatar-placeholder">ОС</div>
+                                        <div>
+                                            <div class="spec-name">Ольга Соколова</div>
+                                            <div class="spec-role-tag" data-i18n="opt_role_master">Мастер</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="spec-meta-block">
+                                        <span class="meta-main" data-i18n="opt_dir_pm">Перманентный макияж</span>
+                                        <span class="meta-sub" data-i18n="opt_cat_junior">Юниор</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <ul class="achievements-list">
+                                        <li data-i18n="ach_5_1">🥉 3 место "GABI Debut 2025"</li>
+                                    </ul>
+                                </td>
+                                <td class="points-cell">
+                                    <span class="points-val">2,650</span>
+                                    <span class="points-lbl" data-i18n="lbl_pts">баллов</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div id="noResults" class="no-results" style="display: none;">
+                        <p data-i18n="no_results_text">По заданным фильтрам специалисты не найдены.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ПОДВАЛ -->
+        <footer class="footer">
+            <div class="container footer-content">
+                <div class="footer-info">
+                    <a href="main.html" class="logo">GABI & IEEBA</a>
+                    <p style="margin-top: 10px; max-width: 300px;" data-i18n="footer_desc">Международная ассоциация бьюти-специалистов и экспертов эстетической медицины.</p>
+                </div>
+
+                <div class="footer-contacts">
+                    <h4 data-i18n="footer_contacts_title">Контакты</h4>
+                    <p data-i18n="footer_address">📍 г. Москва, ул. Пресненская наб., д. 12</p>
+                    <p>✉️ info@gabi-ieeba.org</p>
+                    <p>📞 +7 (800) 555-35-35</p>
+                </div>
+
+                <div class="footer-socials">
+                    <h4 data-i18n="footer_socials_title">Мы в соцсетях</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-btn">Telegram</a>
+                        <a href="#" class="social-btn">VKontakte</a>
+                        <a href="#" class="social-btn">Instagram</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container footer-bottom">
+                <p>&copy; 2026 GABI & IEEBA Association. <span data-i18n="footer_rights">Все права защищены.</span></p>
+                <a href="#" style="color: var(--text-muted); text-decoration: none; font-size: 0.8rem;" data-i18n="privacy_policy">Политика конфиденциальности</a>
+            </div>
+        </footer>
+    </main>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/rating.js"></script>
+</body>
+</html>

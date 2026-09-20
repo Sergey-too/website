@@ -12,17 +12,6 @@
     background-repeat: no-repeat;  
 }
 
-/* Полупрозрачное затемнение фона */
-.hero-bg-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(11, 15, 25, 0.75); /* Изменено с синего на цвет вашего background-main */
-    z-index: 1;
-}
-
 .hero-container {
     position: relative;
     z-index: 2;
