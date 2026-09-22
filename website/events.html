@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GABI & IEEBA — Чемпионаты и мероприятия</title>
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/events.css">
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="main.html" class="logo">GABI & IEEBA</a>
+
+            <nav class="nav">
+                <a href="about.html" data-i18n="nav_about">Об ассоциации</a>
+
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle"><span data-i18n="nav_participation">Участие</span> <span class="arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="membership.html" data-i18n="nav_membership">Членство</a>
+                        <a href="accreditation.html" data-i18n="nav_accreditation">Аккредитация</a>
+                        <a href="events.html" class="active" data-i18n="nav_events_all">Мероприятия</a>
+                    </div>
+                </div>
+
+                <a href="specialists.html" data-i18n="nav_specialists">Специалисты</a>
+                <a href="rating.html" data-i18n="nav_rating">Рейтинг</a>
+
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle"><span data-i18n="nav_info">Информация</span> <span class="arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="news.html" data-i18n="nav_news">Новости</a>
+                        <a href="documents.html" data-i18n="nav_docs">Документы</a>
+                    </div>
+                </div>
+
+                <a href="contacts.html" data-i18n="nav_contacts">Контакты</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <a href="#" class="btn-login-gold" data-i18n="btn_login">Личный кабинет</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="page-hero">
+            <div class="container fade-in text-center">
+                <span class="hero-subtitle" data-i18n="ev_subtitle">Международный календарь событий</span>
+                <h1 data-i18n="ev_hero_title">Чемпионаты и мероприятия</h1>
+                <p class="hero-desc" data-i18n="ev_hero_desc">
+                    Каталог будущих, текущих и завершённых событий ассоциации GABI & IEEBA: чемпионаты, кубки, форумы и образовательные интенсивы.
+                </p>
+            </div>
+        </section>
+
+        <!-- ФИЛЬТРЫ -->
+        <section class="events-filter-section">
+            <div class="container">
+                <div class="events-tabs">
+                    <button class="events-tab active" data-filter="upcoming" data-i18n="ev_tab_upcoming">Будущие</button>
+                    <button class="events-tab" data-filter="current" data-i18n="ev_tab_current">Текущие</button>
+                    <button class="events-tab" data-filter="past" data-i18n="ev_tab_past">Завершённые</button>
+                    <button class="events-tab" data-filter="all" data-i18n="ev_tab_all">Все события</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- КАТАЛОГ -->
+        <section class="events-catalog-section">
+            <div class="container">
+                <div class="events-grid">
+
+                    <!-- БУДУЩЕЕ -->
+                    <article class="event-card" data-status="upcoming">
+                        <div class="event-cover">
+                            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="GABI Championship">
+                            <span class="event-status status-upcoming" data-i18n="ev_status_upcoming">Будущее</span>
+                        </div>
+                        <div class="event-body">
+                            <span class="event-date" data-i18n="ev_1_date">15–18 октября 2026</span>
+                            <h3 data-i18n="ev_1_title">GABI Championship 2026</h3>
+                            <p data-i18n="ev_1_desc">Международный чемпионат специалистов бьюти-индустрии и эстетической медицины.</p>
+                            <div class="event-meta">
+                                <span>📍 Москва</span>
+                                <span data-i18n="ev_format_offline">Офлайн</span>
+                            </div>
+                            <a href="event.html" class="btn-tier" data-i18n="ev_btn_more">Подробнее</a>
+                        </div>
+                    </article>
+
+                    <!-- ТЕКУЩЕЕ -->
+                    <article class="event-card" data-status="current">
+                        <div class="event-cover">
+                            <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=800&q=80" alt="IEEBA Cup">
+                            <span class="event-status status-current" data-i18n="ev_status_current">Идёт сейчас</span>
+                        </div>
+                        <div class="event-body">
+                            <span class="event-date" data-i18n="ev_2_date">01 ноября 2026</span>
+                            <h3 data-i18n="ev_2_title">IEEBA International Cup</h3>
+                            <p data-i18n="ev_2_desc">Ежегодный кубок с участием международных судей и премиум-номинаций.</p>
+                            <div class="event-meta">
+                                <span>📍 Санкт-Петербург</span>
+                                <span data-i18n="ev_format_hybrid">Гибрид</span>
+                            </div>
+                            <a href="event.html" class="btn-tier" data-i18n="ev_btn_more">Подробнее</a>
+                        </div>
+                    </article>
+
+                    <!-- ЗАВЕРШЁННОЕ -->
+                    <article class="event-card" data-status="past">
+                        <div class="event-cover">
+                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="Summer Cup">
+                            <span class="event-status status-past" data-i18n="ev_status_past">Завершено</span>
+                        </div>
+                        <div class="event-body">
+                            <span class="event-date" data-i18n="ev_3_date">10–12 июня 2026</span>
+                            <h3 data-i18n="ev_3_title">IEEBA Summer Cup 2026</h3>
+                            <p data-i18n="ev_3_desc">Летний кубок с участием более 200 мастеров из 12 стран. Итоги опубликованы.</p>
+                            <div class="event-meta">
+                                <span>📍 Минск</span>
+                                <span data-i18n="ev_format_offline">Офлайн</span>
+                            </div>
+                            <a href="event.html" class="btn-tier" data-i18n="ev_btn_results">Результаты</a>
+                        </div>
+                    </article>
+
+                    <!-- БУДУЩЕЕ -->
+                    <article class="event-card" data-status="upcoming">
+                        <div class="event-cover">
+                            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="Master Forum">
+                            <span class="event-status status-upcoming" data-i18n="ev_status_upcoming">Будущее</span>
+                        </div>
+                        <div class="event-body">
+                            <span class="event-date" data-i18n="ev_4_date">20 декабря 2026</span>
+                            <h3 data-i18n="ev_4_title">International Beauty Forum</h3>
+                            <p data-i18n="ev_4_desc">Форум экспертов с мастер-классами от международных спикеров и судей.</p>
+                            <div class="event-meta">
+                                <span>📍 Онлайн</span>
+                                <span data-i18n="ev_format_online">Онлайн</span>
+                            </div>
+                            <a href="event.html" class="btn-tier" data-i18n="ev_btn_more">Подробнее</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="main.html" class="logo">GABI & IEEBA</a>
+                <p data-i18n="footer_desc">Международная ассоциация бьюти-специалистов и экспертов эстетической медицины.</p>
+                <div class="social-links">
+                    <a href="#" class="social-btn">Telegram</a>
+                    <a href="#" class="social-btn">VKontakte</a>
+                    <a href="#" class="social-btn">Instagram</a>
+                </div>
+            </div>
+
+            <div class="footer-nav-col">
+                <h4 data-i18n="footer_col_nav">Навигация</h4>
+                <ul>
+                    <li><a href="main.html" data-i18n="nav_home">Главная</a></li>
+                    <li><a href="about.html" data-i18n="nav_about">Об ассоциации</a></li>
+                    <li><a href="specialists.html" data-i18n="nav_specialists">Реестр специалистов</a></li>
+                    <li><a href="rating.html" data-i18n="nav_rating">Единый рейтинг</a></li>
+                    <li><a href="contacts.html" data-i18n="nav_contacts">Контакты</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-nav-col">
+                <h4 data-i18n="footer_col_part">Участие и инфо</h4>
+                <ul>
+                    <li><a href="membership.html" data-i18n="nav_membership">Членство в ассоциации</a></li>
+                    <li><a href="accreditation.html" data-i18n="nav_accreditation">Аккредитация школ</a></li>
+                    <li><a href="events.html" data-i18n="nav_events_all">Чемпионаты и события</a></li>
+                    <li><a href="news.html" data-i18n="nav_news">Новости индустрии</a></li>
+                    <li><a href="documents.html" data-i18n="nav_docs">Официальные документы</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contacts">
+                <h4 data-i18n="footer_contacts_title">Контакты</h4>
+                <p data-i18n="footer_address">📍 г. Москва, Пресненская наб., д. 12</p>
+                <p>✉️ info@gabi-ieeba.org</p>
+                <p>📞 +7 (800) 555-35-35</p>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 GABI & IEEBA Association. <span data-i18n="footer_rights">Все права защищены.</span></p>
+            <div class="footer-legal">
+                <a href="#" data-i18n="privacy_policy">Политика конфиденциальности</a>
+                <a href="#" data-i18n="terms_use">Пользовательское соглашение</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/events.js"></script>
+</body>
+</html>

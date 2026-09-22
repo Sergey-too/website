@@ -7,31 +7,24 @@
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/rating.css">
-    <style>
-        /* Выравнивание заголовка HERO по центру */
-        .page-hero {
-            text-align: center;
-            padding: 40px 0 20px;
-        }
-
-        .page-hero h1 {
-            display: inline-block;
-            margin: 0 auto;
-        }
-    </style>
 </head>
 <body>
 
     <!-- ШАПКА -->
     <header class="header">
         <div class="container header-content">
-            <a href="main.html" class="logo">GABI & IEEBA</a>
+            <a href="main.html" class="logo">
+                <span class="logo-accent">GABI</span> & IEEBA
+            </a>
             
             <nav class="nav">
                 <a href="about.html" data-i18n="nav_about">Об ассоциации</a>
                 
                 <div class="dropdown">
-                    <a href="#" class="dropdown-toggle"><span data-i18n="nav_participation">Участие</span> <span class="arrow">▾</span></a>
+                    <a href="#" class="dropdown-toggle">
+                        <span data-i18n="nav_participation">Участие</span> 
+                        <span class="arrow">▾</span>
+                    </a>
                     <div class="dropdown-menu">
                         <a href="membership.html" data-i18n="nav_membership">Членство</a>
                         <a href="accreditation.html" data-i18n="nav_accreditation">Аккредитация</a>
@@ -43,7 +36,10 @@
                 <a href="rating.html" class="active" data-i18n="nav_rating">Рейтинг</a>
 
                 <div class="dropdown">
-                    <a href="#" class="dropdown-toggle"><span data-i18n="nav_info">Информация</span> <span class="arrow">▾</span></a>
+                    <a href="#" class="dropdown-toggle">
+                        <span data-i18n="nav_info">Информация</span> 
+                        <span class="arrow">▾</span>
+                    </a>
                     <div class="dropdown-menu">
                         <a href="news.html" data-i18n="nav_news">Новости</a>
                         <a href="documents.html" data-i18n="nav_docs">Документы</a>
@@ -54,6 +50,7 @@
             </nav>
 
             <div class="header-actions">
+                <!-- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА (ЗОЛОТОЙ) -->
                 <div class="lang-switcher">
                     <button class="lang-btn active" data-lang="ru">RU</button>
                     <button class="lang-btn" data-lang="en">EN</button>
@@ -68,6 +65,7 @@
         <section class="page-hero">
             <div class="container fade-in">
                 <h1><span data-i18n="rating_hero_title">Общий рейтинг специалистов</span></h1>
+                <p class="hero-subtitle">Официальный реестр достижений, квалификаций и баллов экспертов ассоциации</p>
             </div>
         </section>
 
@@ -77,7 +75,6 @@
 
                 <!-- ПАНЕЛЬ ФИЛЬТРОВ -->
                 <div class="filter-panel">
-                    <!-- Шапка фильтра -->
                     <div class="filter-header">
                         <div class="filter-title">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -94,7 +91,6 @@
                         </button>
                     </div>
 
-                    <!-- Поиск по имени -->
                     <div class="filter-search-box">
                         <div class="filter-group">
                             <label for="searchName" data-i18n="filter_label_search">Поиск специалиста</label>
@@ -108,7 +104,6 @@
                         </div>
                     </div>
 
-                    <!-- Сетка выпадающих списков -->
                     <div class="filter-grid">
                         <div class="filter-group">
                             <label for="filterRole" data-i18n="filter_label_role">Роль / Статус</label>
@@ -252,60 +247,6 @@
                                     <span class="points-lbl" data-i18n="lbl_pts">баллов</span>
                                 </td>
                             </tr>
-                            <tr class="rating-row" data-role="master" data-direction="nails" data-section="championship" data-category="master">
-                                <td class="rank-cell"><div class="rank-badge plain">4</div></td>
-                                <td>
-                                    <div class="specialist-info">
-                                        <div class="avatar-placeholder">ДП</div>
-                                        <div>
-                                            <div class="spec-name">Дмитрий Петров</div>
-                                            <div class="spec-role-tag" data-i18n="opt_role_master">Мастер</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="spec-meta-block">
-                                        <span class="meta-main" data-i18n="opt_dir_nails">Nail-сервис</span>
-                                        <span class="meta-sub" data-i18n="opt_cat_master">Мастер</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <ul class="achievements-list">
-                                        <li data-i18n="ach_4_1">🥈 2 место "Nail Design Championship 2025"</li>
-                                    </ul>
-                                </td>
-                                <td class="points-cell">
-                                    <span class="points-val">3,120</span>
-                                    <span class="points-lbl" data-i18n="lbl_pts">баллов</span>
-                                </td>
-                            </tr>
-                            <tr class="rating-row" data-role="master" data-direction="pm" data-section="championship" data-category="junior">
-                                <td class="rank-cell"><div class="rank-badge plain">5</div></td>
-                                <td>
-                                    <div class="specialist-info">
-                                        <div class="avatar-placeholder">ОС</div>
-                                        <div>
-                                            <div class="spec-name">Ольга Соколова</div>
-                                            <div class="spec-role-tag" data-i18n="opt_role_master">Мастер</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="spec-meta-block">
-                                        <span class="meta-main" data-i18n="opt_dir_pm">Перманентный макияж</span>
-                                        <span class="meta-sub" data-i18n="opt_cat_junior">Юниор</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <ul class="achievements-list">
-                                        <li data-i18n="ach_5_1">🥉 3 место "GABI Debut 2025"</li>
-                                    </ul>
-                                </td>
-                                <td class="points-cell">
-                                    <span class="points-val">2,650</span>
-                                    <span class="points-lbl" data-i18n="lbl_pts">баллов</span>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
 
@@ -317,34 +258,83 @@
             </div>
         </section>
 
-        <!-- ПОДВАЛ -->
+<!-- ПОДВАЛ (FOOTER) -->
         <footer class="footer">
-            <div class="container footer-content">
-                <div class="footer-info">
-                    <a href="main.html" class="logo">GABI & IEEBA</a>
-                    <p style="margin-top: 10px; max-width: 300px;" data-i18n="footer_desc">Международная ассоциация бьюти-специалистов и экспертов эстетической медицины.</p>
-                </div>
-
-                <div class="footer-contacts">
-                    <h4 data-i18n="footer_contacts_title">Контакты</h4>
-                    <p data-i18n="footer_address">📍 г. Москва, ул. Пресненская наб., д. 12</p>
-                    <p>✉️ info@gabi-ieeba.org</p>
-                    <p>📞 +7 (800) 555-35-35</p>
-                </div>
-
-                <div class="footer-socials">
-                    <h4 data-i18n="footer_socials_title">Мы в соцсетях</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-btn">Telegram</a>
-                        <a href="#" class="social-btn">VKontakte</a>
-                        <a href="#" class="social-btn">Instagram</a>
+            <div class="container footer-grid-nav">
+                <!-- Блок бренда -->
+                <div class="footer-brand">
+                    <a href="main.html" class="logo">
+                        <span class="logo-accent">GABI</span> & IEEBA
+                    </a>
+                    <p class="footer-text" data-i18n="footer_desc">
+                        Международная ассоциация бьюти-специалистов и экспертов эстетической медицины.
+                    </p>
+                    
+                    <!-- Социальные сети / Ссылки под логотипом -->
+                    <div class="footer-socials">
+                        <a href="https://t.me/" target="_blank" class="social-btn" title="Telegram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21.5 2L2 9.5l7.5 3L17 6.5l-5.5 8L18 20l3.5-18z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/" target="_blank" class="social-btn" title="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="https://vk.com/" target="_blank" class="social-btn" title="VK">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://youtube.com/" target="_blank" class="social-btn" title="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                        </a>
                     </div>
+                </div>
+
+                <!-- Разделы сайта -->
+                <div class="footer-col">
+                    <h4 data-i18n="footer_col_nav">Навигация</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-i18n="nav_about">Об ассоциации</a></li>
+                        <li><a href="specialists.html" data-i18n="nav_specialists">Специалисты</a></li>
+                        <li><a href="rating.html" data-i18n="nav_rating">Рейтинг</a></li>
+                        <li><a href="news.html" data-i18n="nav_news">Новости</a></li>
+                        <li><a href="contacts.html" data-i18n="nav_contacts">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <!-- Участие -->
+                <div class="footer-col">
+                    <h4 data-i18n="footer_col_participation">Участие</h4>
+                    <ul class="footer-links">
+                        <li><a href="membership.html" data-i18n="nav_membership">Членство</a></li>
+                        <li><a href="accreditation.html" data-i18n="nav_accreditation">Аккредитация</a></li>
+                        <li><a href="events.html" data-i18n="nav_events_all">Мероприятия</a></li>
+                        <li><a href="documents.html" data-i18n="nav_docs">Документы</a></li>
+                    </ul>
+                </div>
+
+                <!-- Контакты -->
+                <div class="footer-col">
+                    <h4 data-i18n="footer_contacts_title">Контакты</h4>
+                    <ul class="footer-contacts-list">
+                        <li data-i18n="footer_address">📍 г. Москва, Пресненская наб., 12</li>
+                        <li>✉️ <a href="mailto:info@gabi-ieeba.org">info@gabi-ieeba.org</a></li>
+                        <li>📞 <a href="tel:+78005553535">+7 (800) 555-35-35</a></li>
+                    </ul>
                 </div>
             </div>
 
             <div class="container footer-bottom">
                 <p>&copy; 2026 GABI & IEEBA Association. <span data-i18n="footer_rights">Все права защищены.</span></p>
-                <a href="#" style="color: var(--text-muted); text-decoration: none; font-size: 0.8rem;" data-i18n="privacy_policy">Политика конфиденциальности</a>
+                <a href="privacy.html" class="privacy-link" data-i18n="privacy_policy">Политика конфиденциальности</a>
             </div>
         </footer>
     </main>

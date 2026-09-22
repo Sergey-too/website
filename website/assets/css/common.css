@@ -1,384 +1,434 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-:root {
-    --bg-main: #0b0f19;
-    --bg-card: #151c2c;
-    --border-color: #232e47;
-    --accent: #f59e0b;
-    --accent-hover: #d97706;
-    --text-main: #f8fafc;
-    --text-muted: #94a3b8;
-}
+    :root {
+        /* Основная светлая палитра */
+        --bg-main: #f8fafc;
+        --bg-card: #ffffff;
+        --bg-secondary: #f1f5f9;
+        --border-color: #e2e8f0;
+        
+        /* Золотая акцентная гамма */
+        --gold-main: #c5a059;
+        --gold-hover: #b08c46;
+        --gold-light: #fef9e7;
+        --gold-border: rgba(197, 160, 89, 0.3);
+        --gold-gradient: linear-gradient(135deg, #d4af37 0%, #c5a059 100%);
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: var(--bg-main);
-    color: var(--text-main);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+        /* Текст */
+        --text-main: #0f172a;
+        --text-muted: #64748b;
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    width: 100%;
-}
+        /* Тени */
+        --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+        --shadow-hover: 0 10px 25px rgba(197, 160, 89, 0.18);
+    }
 
-/* ==========================================
-   ИСПРАВЛЕНИЕ НЕВИДИМОСТИ (FADE-IN FIX)
-   ========================================== */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background-color: var(--bg-main);
+        color: var(--text-main);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
 
-/* Делаем элементы видимыми сразу или по классу visible */
-.fade-in.visible,
-.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-}
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        width: 100%;
+    }
 
-/* ==========================================
-   ШАПКА (HEADER)
-   ========================================== */
-.header {
-    border-bottom: 1px solid var(--border-color);
-    background: rgba(11, 15, 25, 0.85);
-    backdrop-filter: blur(8px);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+    /* ==========================================
+    ИСПРАВЛЕНИЕ НЕВИДИМОСТИ (FADE-IN FIX)
+    ========================================== */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
 
-.header-content {
-    height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+    .fade-in.visible,
+    .fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
-.logo {
-    font-weight: 900;
-    color: #0b0f19;
-    background: var(--accent);
-    padding: 8px 14px;
-    border-radius: 8px;
-    text-decoration: none;
-    letter-spacing: 0.5px;
-}
+    /* ==========================================
+    ШАПКА (HEADER)
+    ========================================== */
+    .header {
+        border-bottom: 1px solid var(--border-color);
+        background: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(12px);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
 
-.nav {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-}
+    .header-content {
+        height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-.nav a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s;
-}
+    .logo {
+        font-weight: 900;
+        color: #ffffff;
+        background: var(--gold-gradient);
+        padding: 8px 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 12px rgba(197, 160, 89, 0.25);
+    }
 
-.nav a:hover {
-    color: var(--text-main);
-}
+    .nav {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+    }
 
-.header-actions {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
+    .nav a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
 
-.lang-switcher {
-    display: flex;
-    gap: 4px;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 3px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-}
+    .nav a:hover {
+        color: var(--gold-main);
+    }
 
-.lang-btn {
-    background: none;
-    border: none;
-    color: var(--text-muted);
-    padding: 4px 10px;
-    cursor: pointer;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    transition: all 0.3s;
-}
+    .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
 
-.lang-btn.active {
-    background: var(--accent);
-    color: #0b0f19;
-}
+    .lang-switcher {
+        display: flex;
+        gap: 4px;
+        background: var(--bg-secondary);
+        padding: 3px;
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+    }
 
-.btn-login {
-    color: var(--text-main);
-    text-decoration: none;
-    font-size: 0.9rem;
-    border: 1px solid var(--border-color);
-    padding: 8px 18px;
-    border-radius: 8px;
-    transition: background 0.3s;
-}
+    .lang-btn {
+        background: none;
+        border: none;
+        color: var(--text-muted);
+        padding: 4px 10px;
+        cursor: pointer;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        transition: all 0.3s;
+    }
 
-.btn-login:hover {
-    background: var(--border-color);
-}
+    .lang-btn.active {
+        background: var(--gold-main);
+        color: #ffffff;
+    }
 
-/* Выпадающее меню (Dropdown) */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
+    .btn-login {
+        color: var(--text-main);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        border: 1px solid var(--gold-border);
+        padding: 8px 18px;
+        border-radius: 8px;
+        transition: all 0.3s;
+        background: #ffffff;
+    }
 
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 220px;
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    padding: 8px 0;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-}
+    .btn-login:hover {
+        background: var(--gold-light);
+        border-color: var(--gold-main);
+        color: var(--gold-main);
+    }
 
-.dropdown-menu a {
-    display: block;
-    padding: 10px 16px;
-    color: var(--text-main);
-    text-decoration: none;
-    font-size: 0.9rem;
-    white-space: nowrap;
-    transition: background 0.2s ease, color 0.2s ease;
-}
+    /* Выпадающее меню (Dropdown) */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
 
-.dropdown-menu a:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    color: var(--accent);
-}
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background-color: #ffffff;
+        border: 1px solid var(--gold-border);
+        border-radius: 12px;
+        padding: 8px 0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        z-index: 1000;
+    }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
+    .dropdown-menu a {
+        display: block;
+        padding: 10px 16px;
+        color: var(--text-main);
+        text-decoration: none;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        transition: background 0.2s ease, color 0.2s ease;
+    }
 
-/* ==========================================
-   КНОПКИ ОБЩИЕ
-   ========================================== */
-.btn-primary {
-    display: inline-block;
-    background: var(--accent);
-    color: #0b0f19;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: 600;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s;
-}
+    .dropdown-menu a:hover {
+        background-color: var(--gold-light);
+        color: var(--gold-main);
+    }
 
-.btn-primary:hover {
-    background: var(--accent-hover);
-}
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
 
-.btn-secondary {
-    display: inline-block;
-    background: transparent;
-    color: var(--text-main);
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: 600;
-    text-decoration: none;
-    border: 1px solid var(--border-color);
-    transition: background 0.3s;
-}
+    /* ==========================================
+    КНОПКИ ОБЩИЕ
+    ========================================== */
+    .btn-primary {
+        display: inline-block;
+        background: var(--gold-gradient);
+        color: #ffffff;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(197, 160, 89, 0.25);
+        transition: all 0.3s ease;
+    }
 
-.btn-secondary:hover {
-    background: var(--border-color);
-}
+    .btn-primary:hover {
+        box-shadow: 0 6px 20px rgba(197, 160, 89, 0.4);
+        transform: translateY(-2px);
+    }
 
-/* ==========================================
-   HERO СЕКЦИЯ (ПЕРВЫЙ ЭКРАН)
-   ========================================== */
-.hero {
-    position: relative;
-    min-height: calc(100vh - 75px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 60px 0;
-    overflow: hidden;
-}
+    .btn-secondary {
+        display: inline-block;
+        background: #ffffff;
+        color: var(--text-main);
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        border: 1px solid var(--border-color);
+        transition: all 0.3s ease;
+    }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(245, 158, 11, 0.18) 0%, rgba(245, 158, 11, 0) 70%);
-    border-radius: 50%;
-    filter: blur(60px);
-    pointer-events: none;
-    z-index: 0;
-}
+    .btn-secondary:hover {
+        background: var(--bg-secondary);
+        border-color: var(--gold-main);
+        color: var(--gold-main);
+    }
 
-.hero .container {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    /* ==========================================
+    HERO СЕКЦИЯ (ПЕРВЫЙ ЭКРАН)
+    ========================================== */
+    .hero {
+        position: relative;
+        min-height: calc(100vh - 75px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 60px 0;
+        overflow: hidden;
+        background: radial-gradient(circle at center, #ffffff 0%, var(--bg-main) 100%);
+    }
 
-.hero-badge {
-    display: inline-block;
-    padding: 6px 16px;
-    background: rgba(245, 158, 11, 0.1);
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    border-radius: 20px;
-    font-size: 0.85rem;
-    margin-bottom: 20px;
-}
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(212, 175, 55, 0) 70%);
+        border-radius: 50%;
+        filter: blur(80px);
+        pointer-events: none;
+        z-index: 0;
+    }
 
-.hero h1 {
-    font-size: 3rem;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    color: var(--text-main);
-}
+    .hero .container {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.hero .highlight {
-    color: var(--accent);
-}
+    .hero-badge {
+        display: inline-block;
+        padding: 6px 16px;
+        background: var(--gold-light);
+        border: 1px solid var(--gold-border);
+        color: var(--gold-main);
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
 
-.hero p {
-    max-width: 650px;
-    margin: 0 auto 30px;
-    color: var(--text-muted);
-    font-size: 1.1rem;
-}
+    .hero h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        color: var(--text-main);
+        font-weight: 800;
+    }
 
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-}
+    .hero .highlight {
+        color: var(--gold-main);
+    }
 
-/* ==========================================
-   СЕКЦИИ И СЕТКИ (DIRECTIONS, EVENTS, ETC.)
-   ========================================== */
-section {
-    padding: 60px 0;
-}
+    .hero p {
+        max-width: 650px;
+        margin: 0 auto 30px;
+        color: var(--text-muted);
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
 
-.section-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
+    .hero-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+    }
 
-.section-title {
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-}
+    /* ==========================================
+    СЕКЦИИ И СЕТКИ (DIRECTIONS, EVENTS, ETC.)
+    ========================================== */
+    section {
+        padding: 60px 0;
+    }
 
-.section-subtitle {
-    color: var(--text-muted);
-}
+    .section-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
 
-.directions-grid, .events-grid, .benefits-grid, .specialists-grid, .news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        color: var(--text-main);
+        font-weight: 700;
+    }
 
-.direction-card, .card, .benefit-card, .specialist-card, .news-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 25px;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
+    .section-subtitle {
+        color: var(--text-muted);
+        font-size: 1rem;
+    }
 
-.direction-card:hover, .card:hover, .benefit-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent);
-}
+    .directions-grid, .events-grid, .benefits-grid, .specialists-grid, .news-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
 
-.card-link {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
-}
+    .direction-card, .card, .benefit-card, .specialist-card, .news-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 25px;
+        box-shadow: var(--shadow-soft);
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
 
-/* Таблица рейтинга */
-.rating-table-wrapper {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    overflow-x: auto;
-}
+    .direction-card:hover, .card:hover, .benefit-card:hover, .specialist-card:hover, .news-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--gold-main);
+        box-shadow: var(--shadow-hover);
+    }
 
-.rating-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-}
+    .card-link {
+        color: var(--gold-main);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.2s;
+    }
 
-.rating-table th, .rating-table td {
-    padding: 16px 20px;
-    border-bottom: 1px solid var(--border-color);
-}
+    .card-link:hover {
+        color: var(--gold-hover);
+    }
 
-.rating-table th {
-    color: var(--text-muted);
-    font-size: 0.85rem;
-}
+    /* Таблица рейтинга */
+    .rating-table-wrapper {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        overflow-x: auto;
+        box-shadow: var(--shadow-soft);
+    }
 
-/* ==========================================
-   ПОДВАЛ (FOOTER)
-   ========================================== */
-.footer {
-    margin-top: auto;
-    border-top: 1px solid var(--border-color);
-    padding: 35px 0;
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    background: #070a12;
-}
+    .rating-table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+    }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-bottom: 30px;
-}
+    .rating-table th, .rating-table td {
+        padding: 16px 20px;
+        border-bottom: 1px solid var(--border-color);
+    }
 
-.footer-bottom {
-    border-top: 1px solid var(--border-color);
-    padding-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    .rating-table th {
+        color: var(--text-muted);
+        background: var(--bg-secondary);
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .rating-table tr:last-child td {
+        border-bottom: none;
+    }
+
+    .rating-table tr:hover td {
+        background-color: var(--gold-light);
+    }
+
+    /* ==========================================
+    ПОДВАЛ (FOOTER)
+    ========================================== */
+    .footer {
+        margin-top: auto;
+        border-top: 1px solid var(--border-color);
+        padding: 40px 0 25px;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        background: #ffffff;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid var(--border-color);
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }

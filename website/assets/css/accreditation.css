@@ -1,0 +1,567 @@
+/* ==========================================================================
+   ACCREDITATION PAGE — светлая золотая палитра
+   ========================================================================== */
+
+:root {
+    --bg-light: #ffffff;
+    --bg-secondary: #faf8f3;
+    --card-bg: #ffffff;
+
+    --gold-main: #d4af37;
+    --gold-hover: #b38e46;
+    --gold-light: rgba(197, 160, 89, 0.12);
+    --gold-gradient: linear-gradient(135deg, #d4af37 0%, #d4af37 100%);
+    --gold-border: #e6cb7a;
+
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --shadow-soft: 0 10px 30px rgba(197, 160, 89, 0.08);
+    --shadow-hover: 0 15px 35px rgba(197, 160, 89, 0.18);
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    font-family: inherit;
+    margin: 0;
+}
+
+.text-center { text-align: center; }
+
+/* ==========================================================================
+   1. ШАПКА
+   ========================================================================== */
+
+.header {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .logo {
+    color: var(--text-dark) !important;
+    font-weight: 800;
+    font-size: 1.3rem;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+}
+
+.header .nav a {
+    color: #334155 !important;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.header .nav a:hover,
+.header .nav a.active {
+    color: var(--gold-main) !important;
+}
+
+.header .dropdown-menu {
+    background-color: #ffffff !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.header .dropdown-menu a { color: #334155 !important; }
+
+.header .dropdown-menu a:hover {
+    background-color: var(--bg-secondary) !important;
+    color: var(--gold-main) !important;
+}
+
+.lang-switcher {
+    display: inline-flex;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2px;
+    gap: 2px;
+}
+
+.lang-btn {
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.lang-btn:hover { color: var(--gold-main); }
+
+.lang-btn.active {
+    background-color: var(--gold-main) !important;
+    color: #ffffff !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-login-gold {
+    background: var(--gold-gradient);
+    color: #ffffff !important;
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+    transition: all 0.2s ease;
+}
+
+.btn-login-gold:hover {
+    box-shadow: 0 6px 18px rgba(212, 175, 55, 0.4);
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   2. HERO
+   ========================================================================== */
+
+.page-hero {
+    background: radial-gradient(circle at top, #ffffff 0%, #f7f3e9 100%);
+    padding: 70px 0 50px;
+    border: none;
+}
+
+.hero-subtitle {
+    display: inline-block;
+    color: var(--gold-main);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+}
+
+.page-hero h1 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.hero-desc {
+    max-width: 680px;
+    margin: 0 auto 30px;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.btn-gold-large {
+    display: inline-block;
+    background: var(--gold-gradient);
+    color: #ffffff;
+    padding: 14px 36px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+    transition: all 0.3s ease;
+}
+
+.btn-gold-large:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.5);
+}
+
+.section-title { margin-bottom: 40px; }
+.section-title h2 { font-size: 2rem; color: var(--text-dark); margin-bottom: 8px; }
+.section-title p { color: var(--text-muted); font-size: 1rem; }
+
+/* ==========================================================================
+   3. ЭТАПЫ ПРОЦЕДУРЫ
+   ========================================================================== */
+
+.process-section {
+    padding: 0px 0;
+    background: var(--bg-secondary);
+    border: none;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.process-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.process-card:hover {
+    border-color: var(--gold-border);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.process-num {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--gold-main);
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+.process-card h3 {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.process-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   4. ТРЕБОВАНИЯ
+   ========================================================================== */
+
+.requirements-section {
+    padding: 80px 0;
+    background: var(--bg-secondary);
+    border: none;
+}
+
+.requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: stretch;
+}
+
+.req-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 36px 28px;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.req-card:hover {
+    border-color: var(--gold-main);
+    transform: scale(1.03);
+    box-shadow: var(--shadow-hover);
+}
+
+.req-card .tier-title {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin: 0 0 18px;
+}
+
+.req-card .tier-features { list-style: none; padding: 0; margin: 0; }
+.req-card .tier-features li {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin-bottom: 10px;
+}
+
+.tier-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #f1f5f9;
+    color: var(--text-muted);
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.tier-badge.gold-bg {
+    background: var(--gold-light);
+    color: var(--gold-main);
+}
+
+/* ==========================================================================
+   5. ДОКУМЕНТЫ + ПОДАЧА ЗАЯВКИ
+   ========================================================================== */
+
+.documents-section {
+    padding: 80px 0;
+    background: var(--bg-secondary);
+    border: none;
+}
+
+.docs-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.docs-info h2 { font-size: 1.8rem; margin-bottom: 12px; }
+.docs-info > p { color: var(--text-muted); margin-bottom: 28px; }
+
+.docs-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.docs-list li { display: flex; gap: 16px; align-items: flex-start; }
+
+.doc-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.docs-list strong { display: block; color: var(--text-dark); margin-bottom: 2px; }
+.docs-list p { color: var(--text-muted); font-size: 0.88rem; margin: 0; }
+
+/* Карточка онлайн-подачи */
+.docs-action-card {
+    background: #ffffff;
+    color: var(--text-dark);
+    border: 1px solid var(--gold-border);
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 10px 30px rgba(197, 160, 89, 0.12);
+    transition: all 0.3s ease;
+}
+
+.docs-action-card:hover {
+    box-shadow: 0 15px 35px rgba(197, 160, 89, 0.22);
+}
+
+.docs-action-card .card-badge {
+    display: inline-block;
+    background: var(--gold-light);
+    color: var(--gold-main);
+    border: 1px solid var(--gold-border);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 14px;
+}
+
+.docs-action-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+.docs-action-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.steps-mini {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: 14px;
+    border-radius: 12px;
+}
+
+.step-item {
+    font-size: 0.88rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.step-item span:first-child {
+    background: var(--gold-gradient);
+    color: #ffffff;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.btn-gold-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--gold-gradient);
+    color: #ffffff !important;
+    text-decoration: none;
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-gold-action:hover {
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   6. ПОДВАЛ
+   ========================================================================== */
+
+.footer {
+    background-color: #ffffff !important;
+    border-top: 1px solid var(--border-color);
+    padding: 60px 0 30px;
+    color: var(--text-dark);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1.1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-brand .logo {
+    color: var(--text-dark) !important;
+    font-weight: 800;
+    font-size: 1.4rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.social-links { display: flex; gap: 10px; }
+
+.social-btn {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    color: var(--text-dark);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.social-btn:hover {
+    border-color: var(--gold-main);
+    color: var(--gold-main);
+    background: #ffffff;
+}
+
+.footer-nav-col h4,
+.footer-contacts h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.footer-nav-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-nav-col a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s ease;
+}
+
+.footer-nav-col a:hover { color: var(--gold-main); }
+
+.footer-contacts p {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-color);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.footer-legal { display: flex; gap: 20px; }
+
+.footer-legal a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-legal a:hover { color: var(--gold-main); }
+
+/* ==========================================================================
+   7. АДАПТИВНОСТЬ
+   ========================================================================== */
+
+@media (max-width: 992px) {
+    .footer-content { grid-template-columns: repeat(2, 1fr); }
+    .process-grid { grid-template-columns: repeat(2, 1fr); }
+    .requirements-grid { grid-template-columns: repeat(2, 1fr); }
+    .docs-wrapper { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+    .footer-content { grid-template-columns: 1fr; }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+    .process-grid,
+    .requirements-grid { grid-template-columns: 1fr; }
+    .page-hero h1 { font-size: 1.8rem; }
+}

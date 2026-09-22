@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GABI & IEEBA — Об ассоциации</title>
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <title>GABI &amp; IEEBA — Об ассоциации</title>
+        <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/about.css">
 </head>
 <body>
@@ -13,10 +12,10 @@
     <!-- ШАПКА -->
     <header class="header">
         <div class="container header-content">
-            <a href="main.html" class="logo">GABI & IEEBA</a>
+            <a href="main.html" class="logo">GABI &amp; IEEBA</a>
             
             <nav class="nav">
-                <a href="about.html" data-i18n="nav_about">Об ассоциации</a>
+                <a href="about.html" class="active" data-i18n="nav_about">Об ассоциации</a>
                 
                 <div class="dropdown">
                     <a href="#" class="dropdown-toggle"><span data-i18n="nav_participation">Участие</span> <span class="arrow">▾</span></a>
@@ -46,18 +45,18 @@
                     <button class="lang-btn active" onclick="changeLanguage('ru')">RU</button>
                     <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
                 </div>
-                <a href="#" class="btn-login" data-i18n="btn_login">Личный кабинет</a>
+                <a href="login.html" class="btn-login" data-i18n="btn_login">Личный кабинет</a>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- HERO СЕКЦИЯ (Фиксируется при скролле) -->
-        <section class="hero page-hero hero-sticky">
+        <!-- HERO СЕКЦИЯ (ФИКСИРУЕТСЯ КАК ПОДЛОЖКА) -->
+        <section class="hero page-hero about-hero-sticky">
             <div class="hero-bg-overlay"></div>
             <div class="container fade-in hero-container">
                 <span class="hero-badge" data-i18n="about_hero_badge">О нас</span>
-                <h1><span data-i18n="about_hero_title">Международная ассоциация</span><br><span class="highlight">GABI & IEEBA</span></h1>
+                <h1><span data-i18n="about_hero_title">Международная ассоциация</span><br><span class="highlight">GABI &amp; IEEBA</span></h1>
                 <p data-i18n="about_hero_desc">Создаем глобальное экспертное сообщество, объединяем лучших специалистов бьюти-индустрии и устанавливаем высокие стандарты качества.</p>
             </div>
         </section>
@@ -72,7 +71,7 @@
                         <div class="story-content">
                             <span class="sub-title" data-i18n="story_subtitle">Наша история</span>
                             <h2 data-i18n="story_title">Путь к международному признанию</h2>
-                            <p data-i18n="story_text_1">Ассоциация GABI & IEEBA была основана как объединение ведущих мастеров, судей и экспертов бьюти-сферы и эстетической медицины. За годы работы мы прошли путь от локальных профессиональных встреч до международной экосистемы.</p>
+                            <p data-i18n="story_text_1">Ассоциация GABI &amp; IEEBA была основана как объединение ведущих мастеров, судей и экспертов бьюти-сферы и эстетической медицины. За годы работы мы прошли путь от локальных профессиональных встреч до международной экосистемы.</p>
                             <p data-i18n="story_text_2">Сегодня ассоциация выступает гарантом независимой оценки, стандартизации квалификаций и развития международной соревновательной культуры.</p>
                         </div>
                         <div class="mission-box">
@@ -104,21 +103,21 @@
 
                     <div class="leadership-grid fade-in">
                         <div class="leader-card">
-                            <div class="leader-avatar">АИ</div>
+                            <img src="assets/images/leader1.jpg" alt="Анна Ивановская" class="leader-avatar">
                             <h3 data-i18n="leader1_name">Анна Ивановская</h3>
                             <span class="leader-role" data-i18n="leader1_role">Президент ассоциации GABI</span>
                             <p class="leader-desc" data-i18n="leader1_desc">Международный эксперт, судья высшей категории, организатор ключевых профильных чемпионатов.</p>
                         </div>
 
                         <div class="leader-card">
-                            <div class="leader-avatar">МП</div>
+                            <img src="assets/images/leader2.jpg" alt="Мария Петрова" class="leader-avatar">
                             <h3 data-i18n="leader2_name">Мария Петрова</h3>
                             <span class="leader-role" data-i18n="leader2_role">Вице-президент IEEBA</span>
                             <p class="leader-desc" data-i18n="leader2_desc">Руководитель судейской коллегии, автор методических программ по аккредитации мастеров.</p>
                         </div>
 
                         <div class="leader-card">
-                            <div class="leader-avatar">ЕК</div>
+                            <img src="assets/images/leader3.jpg" alt="Елена Ковалева" class="leader-avatar">
                             <h3 data-i18n="leader3_name">Елена Ковалева</h3>
                             <span class="leader-role" data-i18n="leader3_role">Представитель в Европе и СНГ</span>
                             <p class="leader-desc" data-i18n="leader3_desc">Куратор международных связей, спикер международных форумов и образовательных программ.</p>
@@ -201,44 +200,75 @@
                         <p data-i18n="about_cta_desc">Свяжитесь с нами для обсуждения условий сотрудничества, аккредитации учебного центра или участия в турнирах.</p>
                         <div class="cta-buttons">
                             <a href="contacts.html" class="btn-primary" data-i18n="cta_btn_contact">Связаться с нами</a>
-                            <a href="#" class="btn-secondary" data-i18n="cta_btn_join">Стать членом</a>
+                            <a href="membership.html" class="btn-secondary" data-i18n="cta_btn_join">Стать членом</a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- ПОДВАЛ (Помещен внутрь перекрывающего слоя) -->
+            <!-- ПОДВАЛ (FOOTER) -->
             <footer class="footer">
                 <div class="container footer-content">
-                    <div class="footer-info">
-                        <a href="main.html" class="logo">GABI & IEEBA</a>
-                        <p style="margin-top: 10px; max-width: 300px;" data-i18n="footer_desc">Международная ассоциация бьюти-специалистов и экспертов эстетической медицины.</p>
-                    </div>
-
-                    <div class="footer-contacts">
-                        <h4 data-i18n="footer_contacts_title">Контакты</h4>
-                        <p data-i18n="footer_address">📍 г. Москва, ул. Пресненская наб., д. 12</p>
-                        <p>✉️ info@gabi-ieeba.org</p>
-                        <p>📞 +7 (800) 555-35-35</p>
-                    </div>
-
-                    <div class="footer-socials">
-                        <h4 data-i18n="footer_socials_title">Мы в соцсетях</h4>
-                        <div class="social-links">
-                            <a href="#" class="social-btn">Telegram</a>
-                            <a href="#" class="social-btn">VKontakte</a>
-                            <a href="#" class="social-btn">Instagram</a>
+                    <div class="footer-brand">
+                        <a href="main.html" class="logo">
+                            <span class="logo-accent">GABI</span> &amp; IEEBA
+                        </a>
+                        <p class="footer-text" data-i18n="footer_desc">
+                            Международная ассоциация бьюти-специалистов и экспертов эстетической медицины.
+                        </p>
+                        
+                        <div class="footer-socials">
+                            <a href="https://t.me/" target="_blank" class="social-btn" title="Telegram">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21.5 2L2 9.5l7.5 3L17 6.5l-5.5 8L18 20l3.5-18z"></path>
+                                </svg>
+                            </a>
+                            <a href="https://instagram.com/" target="_blank" class="social-btn" title="Instagram">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                            <a href="https://vk.com/" target="_blank" class="social-btn" title="VK">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg>
+                            </a>
                         </div>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 data-i18n="footer_nav_title">Навигация</h4>
+                        <ul class="footer-links">
+                            <li><a href="about.html" data-i18n="nav_about">Об ассоциации</a></li>
+                            <li><a href="membership.html" data-i18n="nav_membership">Членство</a></li>
+                            <li><a href="accreditation.html" data-i18n="nav_accreditation">Аккредитация</a></li>
+                            <li><a href="events.html" data-i18n="nav_events_all">Мероприятия</a></li>
+                            <li><a href="specialists.html" data-i18n="nav_specialists">Специалисты</a></li>
+                            <li><a href="rating.html" data-i18n="nav_rating">Рейтинг</a></li>
+                            <li><a href="news.html" data-i18n="nav_news">Новости</a></li>
+                            <li><a href="contacts.html" data-i18n="nav_contacts">Контакты</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 data-i18n="footer_contacts_title">Контакты</h4>
+                        <ul class="footer-contacts-list">
+                            <li data-i18n="footer_address">📍 г. Москва, Пресненская наб., 12</li>
+                            <li>✉️ <a href="mailto:info@gabi-ieeba.org">info@gabi-ieeba.org</a></li>
+                            <li>📞 <a href="tel:+78005553535">+7 (800) 555-35-35</a></li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="container footer-bottom">
-                    <p>&copy; 2026 GABI & IEEBA Association. <span data-i18n="footer_rights">Все права защищены.</span></p>
-                    <a href="#" style="color: var(--text-muted); text-decoration: none; font-size: 0.8rem;" data-i18n="privacy_policy">Политика конфиденциальности</a>
+                    <p>&copy; 2026 GABI &amp; IEEBA Association. <span data-i18n="footer_rights">Все права защищены.</span></p>
+                    <a href="privacy.html" class="privacy-link" data-i18n="privacy_policy">Политика конфиденциальности</a>
                 </div>
             </footer>
 
-        </div> <!-- /.content-overlay -->
+        </div> <!-- /content-overlay -->
     </main>
 
     <script src="assets/js/about.js"></script>
