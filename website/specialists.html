@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GABI & IEEBA — Специалисты</title>
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/specialists.css">
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="main.html" class="logo">GABI & IEEBA</a>
+
+            <nav class="nav">
+                <a href="about.html" data-i18n="nav_about">Об ассоциации</a>
+
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle"><span data-i18n="nav_participation">Участие</span> <span class="arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="membership.html" data-i18n="nav_membership">Членство</a>
+                        <a href="accreditation.html" data-i18n="nav_accreditation">Аккредитация</a>
+                        <a href="events.html" data-i18n="nav_events_all">Мероприятия</a>
+                    </div>
+                </div>
+
+                <a href="specialists.html" class="active" data-i18n="nav_specialists">Специалисты</a>
+                <a href="rating.html" data-i18n="nav_rating">Рейтинг</a>
+
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle"><span data-i18n="nav_info">Информация</span> <span class="arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="news.html" data-i18n="nav_news">Новости</a>
+                        <a href="documents.html" data-i18n="nav_docs">Документы</a>
+                    </div>
+                </div>
+
+                <a href="contacts.html" data-i18n="nav_contacts">Контакты</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <a href="#" class="btn-login-gold" data-i18n="btn_login">Личный кабинет</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="page-hero">
+            <div class="container fade-in text-center">
+                <span class="hero-subtitle" data-i18n="sp_subtitle">Международный реестр профессионалов</span>
+                <h1 data-i18n="sp_hero_title">Специалисты ассоциации GABI & IEEBA</h1>
+                <p class="hero-desc" data-i18n="sp_hero_desc">
+                    Публичные профили аккредитованных мастеров, судей и экспертов бьюти-индустрии. Используйте фильтры, чтобы найти специалиста по статусу, направлению, стране или городу.
+                </p>
+            </div>
+        </section>
+
+        <!-- ФИЛЬТРЫ -->
+        <section class="specialists-filter-section">
+            <div class="container">
+                <div class="filters-bar">
+
+                    <div class="filter-group">
+                        <label data-i18n="sp_filter_status">Статус</label>
+                        <select class="filter-select" id="filterStatus">
+                            <option value="" data-i18n="sp_opt_all_status">Все статусы</option>
+                            <option value="judge" data-i18n="sp_status_judge">Судья</option>
+                            <option value="expert" data-i18n="sp_status_expert">Эксперт</option>
+                            <option value="master" data-i18n="sp_status_master">Мастер</option>
+                            <option value="teacher" data-i18n="sp_status_teacher">Преподаватель</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label data-i18n="sp_filter_direction">Направление</label>
+                        <select class="filter-select" id="filterDirection">
+                            <option value="" data-i18n="sp_opt_all_dirs">Все направления</option>
+                            <option value="nails" data-i18n="dir1_title">Ногти</option>
+                            <option value="lashes" data-i18n="dir2_title">Ресницы</option>
+                            <option value="permanent" data-i18n="dir3_title">Перманент</option>
+                            <option value="hair" data-i18n="dir4_title">Парикмахеры</option>
+                            <option value="makeup" data-i18n="dir5_title">Макияж</option>
+                            <option value="cosmetology" data-i18n="dir6_title">Косметология</option>
+                            <option value="tattoo" data-i18n="dir7_title">Татуировки</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label data-i18n="sp_filter_country">Страна</label>
+                        <select class="filter-select" id="filterCountry">
+                            <option value="" data-i18n="sp_opt_all_countries">Все страны</option>
+                            <option value="ru" data-i18n="sp_country_ru">Россия</option>
+                            <option value="by" data-i18n="sp_country_by">Беларусь</option>
+                            <option value="kz" data-i18n="sp_country_kz">Казахстан</option>
+                            <option value="de" data-i18n="sp_country_de">Германия</option>
+                            <option value="ae" data-i18n="sp_country_ae">ОАЭ</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label data-i18n="sp_filter_city">Город</label>
+                        <select class="filter-select" id="filterCity">
+                            <option value="" data-i18n="sp_opt_all_cities">Все города</option>
+                            <option value="moscow" data-i18n="sp_city_moscow">Москва</option>
+                            <option value="spb" data-i18n="sp_city_spb">Санкт-Петербург</option>
+                            <option value="minsk" data-i18n="sp_city_minsk">Минск</option>
+                            <option value="almaty" data-i18n="sp_city_almaty">Алматы</option>
+                            <option value="berlin" data-i18n="sp_city_berlin">Берлин</option>
+                            <option value="dubai" data-i18n="sp_city_dubai">Дубай</option>
+                        </select>
+                    </div>
+
+                    <button class="filter-reset" id="filterReset" data-i18n="sp_filter_reset">Сбросить</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- КАТАЛОГ -->
+        <section class="specialists-catalog-section">
+            <div class="container">
+                <div class="specialists-grid" id="specialistsGrid">
+
+                    <!-- Карточка 1 -->
+                    <article class="specialist-card" data-status="judge" data-direction="permanent" data-country="ru" data-city="moscow">
+                        <a href="specialist.html" class="specialist-link">
+                            <div class="specialist-photo">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Анна Ивановская">
+                            </div>
+                            <div class="specialist-body">
+                                <div class="specialist-status-badge" data-i18n="sp_status_judge">Судья</div>
+                                <h3 data-i18n="spec1_name">Анна Ивановская</h3>
+                                <p class="specialist-location">📍 Москва, Россия</p>
+                                <p class="specialist-direction" data-i18n="sp_dir_permanent">Перманентный макияж</p>
+                                <div class="specialist-rating">
+                                    <span class="rating-value">384.5</span>
+                                    <span class="rating-label" data-i18n="sp_rating_points">баллов</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Карточка 2 -->
+                    <article class="specialist-card" data-status="master" data-direction="nails" data-country="ru" data-city="spb">
+                        <a href="specialist.html" class="specialist-link">
+                            <div class="specialist-photo">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="Мария Петрова">
+                            </div>
+                            <div class="specialist-body">
+                                <div class="specialist-status-badge" data-i18n="sp_status_master">Мастер</div>
+                                <h3 data-i18n="spec2_name">Мария Петрова</h3>
+                                <p class="specialist-location">📍 Санкт-Петербург, Россия</p>
+                                <p class="specialist-direction" data-i18n="sp_dir_nails">Ногтевой сервис</p>
+                                <div class="specialist-rating">
+                                    <span class="rating-value">291.0</span>
+                                    <span class="rating-label" data-i18n="sp_rating_points">баллов</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Карточка 3 -->
+                    <article class="specialist-card" data-status="expert" data-direction="makeup" data-country="by" data-city="minsk">
+                        <a href="specialist.html" class="specialist-link">
+                            <div class="specialist-photo">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80" alt="Елена Ковалева">
+                            </div>
+                            <div class="specialist-body">
+                                <div class="specialist-status-badge" data-i18n="sp_status_expert">Эксперт</div>
+                                <h3 data-i18n="spec3_name">Елена Ковалева</h3>
+                                <p class="specialist-location">📍 Минск, Беларусь</p>
+                                <p class="specialist-direction" data-i18n="sp_dir_makeup">Макияж и визаж</p>
+                                <div class="specialist-rating">
+                                    <span class="rating-value">268.7</span>
+                                    <span class="rating-label" data-i18n="sp_rating_points">баллов</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Карточка 4 -->
+                    <article class="specialist-card" data-status="teacher" data-direction="hair" data-country="kz" data-city="almaty">
+                        <a href="specialist.html" class="specialist-link">
+                            <div class="specialist-photo">
+                                <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=600&q=80" alt="Ольга Смирнова">
+                            </div>
+                            <div class="specialist-body">
+                                <div class="specialist-status-badge" data-i18n="sp_status_teacher">Преподаватель</div>
+                                <h3 data-i18n="sp_name_olga">Ольга Смирнова</h3>
+                                <p class="specialist-location">📍 Алматы, Казахстан</p>
+                                <p class="specialist-direction" data-i18n="sp_dir_hair">Парикмахерское искусство</p>
+                                <div class="specialist-rating">
+                                    <span class="rating-value">245.2</span>
+                                    <span class="rating-label" data-i18n="sp_rating_points">баллов</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Карточка 5 -->
+                    <article class="specialist-card" data-status="master" data-direction="lashes" data-country="de" data-city="berlin">
+                        <a href="specialist.html" class="specialist-link">
+                            <div class="specialist-photo">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80" alt="Ирина Новикова">
+                            </div>
+                            <div class="specialist-body">
+                                <div class="specialist-status-badge" data-i18n="sp_status_master">Мастер</div>
+                                <h3 data-i18n="sp_name_irina">Ирина Новикова</h3>
+                                <p class="specialist-location">📍 Берлин, Германия</p>
+                                <p class="specialist-direction" data-i18n="sp_dir_lashes">Ресницы</p>
+                                <div class="specialist-rating">
+                                    <span class="rating-value">210.4</span>
+                                    <span class="rating-label" data-i18n="sp_rating_points">баллов</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Карточка 6 -->
+                    <article class="specialist-card" data-status="expert" data-direction="cosmetology" data-country="ae" data-city="dubai">
+                        <a href="specialist.html" class="specialist-link">
+                            <div class="specialist-photo">
+                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" alt="Дмитрий Орлов">
+                            </div>
+                            <div class="specialist-body">
+                                <div class="specialist-status-badge" data-i18n="sp_status_expert">Эксперт</div>
+                                <h3 data-i18n="sp_name_dmitry">Дмитрий Орлов</h3>
+                                <p class="specialist-location">📍 Дубай, ОАЭ</p>
+                                <p class="specialist-direction" data-i18n="sp_dir_cosmetology">Косметология</p>
+                                <div class="specialist-rating">
+                                    <span class="rating-value">198.6</span>
+                                    <span class="rating-label" data-i18n="sp_rating_points">баллов</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                </div>
+
+                <div class="specialists-empty" id="specialistsEmpty" hidden>
+                    <p data-i18n="sp_empty_text">По выбранным фильтрам специалисты не найдены.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="main.html" class="logo">GABI & IEEBA</a>
+                <p data-i18n="footer_desc">Международная ассоциация бьюти-специалистов и экспертов эстетической медицины.</p>
+                <div class="social-links">
+                    <a href="#" class="social-btn">Telegram</a>
+                    <a href="#" class="social-btn">VKontakte</a>
+                    <a href="#" class="social-btn">Instagram</a>
+                </div>
+            </div>
+
+            <div class="footer-nav-col">
+                <h4 data-i18n="footer_col_nav">Навигация</h4>
+                <ul>
+                    <li><a href="main.html" data-i18n="nav_home">Главная</a></li>
+                    <li><a href="about.html" data-i18n="nav_about">Об ассоциации</a></li>
+                    <li><a href="specialists.html" data-i18n="nav_specialists">Реестр специалистов</a></li>
+                    <li><a href="rating.html" data-i18n="nav_rating">Единый рейтинг</a></li>
+                    <li><a href="contacts.html" data-i18n="nav_contacts">Контакты</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-nav-col">
+                <h4 data-i18n="footer_col_part">Участие и инфо</h4>
+                <ul>
+                    <li><a href="membership.html" data-i18n="nav_membership">Членство в ассоциации</a></li>
+                    <li><a href="accreditation.html" data-i18n="nav_accreditation">Аккредитация школ</a></li>
+                    <li><a href="events.html" data-i18n="nav_events_all">Чемпионаты и события</a></li>
+                    <li><a href="news.html" data-i18n="nav_news">Новости индустрии</a></li>
+                    <li><a href="documents.html" data-i18n="nav_docs">Официальные документы</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contacts">
+                <h4 data-i18n="footer_contacts_title">Контакты</h4>
+                <p data-i18n="footer_address">📍 г. Москва, Пресненская наб., д. 12</p>
+                <p>✉️ info@gabi-ieeba.org</p>
+                <p>📞 +7 (800) 555-35-35</p>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 GABI & IEEBA Association. <span data-i18n="footer_rights">Все права защищены.</span></p>
+            <div class="footer-legal">
+                <a href="#" data-i18n="privacy_policy">Политика конфиденциальности</a>
+                <a href="#" data-i18n="terms_use">Пользовательское соглашение</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/specialists.js"></script>
+</body>
+</html>

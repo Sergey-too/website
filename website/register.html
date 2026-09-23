@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация — GABI & IEEBA</title>
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="main.html" class="logo">GABI & IEEBA</a>
+
+            <nav class="nav">
+                <a href="about.html" data-i18n="nav_about">Об ассоциации</a>
+
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle"><span data-i18n="nav_participation">Участие</span> <span class="arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="membership.html" data-i18n="nav_membership">Членство</a>
+                        <a href="accreditation.html" data-i18n="nav_accreditation">Аккредитация</a>
+                        <a href="events.html" data-i18n="nav_events_all">Мероприятия</a>
+                    </div>
+                </div>
+
+                <a href="specialists.html" data-i18n="nav_specialists">Специалисты</a>
+                <a href="rating.html" data-i18n="nav_rating">Рейтинг</a>
+
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle"><span data-i18n="nav_info">Информация</span> <span class="arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="news.html" data-i18n="nav_news">Новости</a>
+                        <a href="documents.html" data-i18n="nav_docs">Документы</a>
+                    </div>
+                </div>
+
+                <a href="contacts.html" data-i18n="nav_contacts">Контакты</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <a href="login.html" class="btn-login-gold" data-i18n="btn_login">Войти</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="auth-section">
+            <div class="container">
+                <div class="auth-card fade-in">
+                    <span class="auth-badge" data-i18n="auth_reg_badge">Регистрация</span>
+                    <h1 data-i18n="auth_reg_title">Создание аккаунта</h1>
+                    <p class="auth-subtitle" data-i18n="auth_reg_subtitle">
+                        Заполните форму — мы отправим письмо для подтверждения адреса электронной почты.
+                    </p>
+
+                    <form class="auth-form" id="registerForm" novalidate>
+
+                        <div class="form-group">
+                            <label for="regName">
+                                <span data-i18n="auth_field_name">Имя и фамилия</span>
+                                <span class="required">*</span>
+                            </label>
+                            <div class="input-wrap">
+                                <input type="text" id="regName" name="name" autocomplete="name" placeholder="Анна Ивановская" required>
+                            </div>
+                            <span class="field-error" data-i18n="auth_err_name">Введите имя (минимум 2 символа)</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="regEmail">
+                                <span data-i18n="auth_field_email">Email</span>
+                                <span class="required">*</span>
+                            </label>
+                            <div class="input-wrap">
+                                <input type="email" id="regEmail" name="email" autocomplete="email" placeholder="you@example.com" required>
+                            </div>
+                            <span class="field-error" data-i18n="auth_err_email">Введите корректный email</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="regPassword">
+                                <span data-i18n="auth_field_password">Пароль</span>
+                                <span class="required">*</span>
+                            </label>
+                            <div class="input-wrap">
+                                <input type="password" id="regPassword" name="password" autocomplete="new-password" placeholder="••••••••" required minlength="8">
+                                <button type="button" class="input-toggle" data-i18n="auth_show_pass">Показать</button>
+                            </div>
+                            <div class="password-strength" id="pwdStrength">
+                                <div class="strength-bar"></div>
+                                <div class="strength-bar"></div>
+                                <div class="strength-bar"></div>
+                            </div>
+                            <span class="strength-label" id="pwdStrengthLabel" data-i18n="auth_pwd_hint">Минимум 8 символов, буквы и цифры</span>
+                            <span class="field-error" data-i18n="auth_err_password">Введите пароль (минимум 8 символов)</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="regPassword2">
+                                <span data-i18n="auth_field_password2">Повторите пароль</span>
+                                <span class="required">*</span>
+                            </label>
+                            <div class="input-wrap">
+                                <input type="password" id="regPassword2" name="password2" autocomplete="new-password" placeholder="••••••••" required>
+                            </div>
+                            <span class="field-error" data-i18n="auth_err_password2">Пароли не совпадают</span>
+                        </div>
+
+                        <!-- Согласия -->
+                        <label class="checkbox-group">
+                            <input type="checkbox" id="agreePrivacy" required>
+                            <span>
+                                <span data-i18n="auth_agree_privacy">Я согласен с</span>
+                                <a href="privacy.html" data-i18n="auth_agree_privacy_link">политикой конфиденциальности</a>
+                                <span data-i18n="auth_agree_and">и обработкой</span>
+                                <a href="privacy.html" data-i18n="auth_agree_pd_link">персональных данных</a>
+                            </span>
+                        </label>
+                        <span class="field-error" id="agreePrivacyError" data-i18n="auth_err_privacy">Необходимо согласие с политикой конфиденциальности</span>
+
+                        <!-- Капча -->
+                        <div class="captcha-box" id="regCaptcha">
+                            <input type="checkbox" id="regCaptchaCheck">
+                            <label for="regCaptchaCheck" data-i18n="auth_captcha">Я не робот</label>
+                        </div>
+
+                        <button type="submit" class="btn-submit" data-i18n="auth_btn_register">Зарегистрироваться</button>
+                    </form>
+
+                    <div class="auth-links">
+                        <span class="muted" data-i18n="auth_have_account">Уже есть аккаунт?</span>
+                        <a href="login.html" data-i18n="auth_login_link">Войти</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/auth.js"></script>
+</body>
+</html>

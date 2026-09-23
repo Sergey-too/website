@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GABI & IEEBA — Новости</title>
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/news.css">
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="main.html" class="logo">GABI & IEEBA</a>
+
+            <nav class="nav">
+                <a href="about.html" data-i18n="nav_about">Об ассоциации</a>
+
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle"><span data-i18n="nav_participation">Участие</span> <span class="arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="membership.html" data-i18n="nav_membership">Членство</a>
+                        <a href="accreditation.html" data-i18n="nav_accreditation">Аккредитация</a>
+                        <a href="events.html" data-i18n="nav_events_all">Мероприятия</a>
+                    </div>
+                </div>
+
+                <a href="specialists.html" data-i18n="nav_specialists">Специалисты</a>
+                <a href="rating.html" data-i18n="nav_rating">Рейтинг</a>
+
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle"><span data-i18n="nav_info">Информация</span> <span class="arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="news.html" class="active" data-i18n="nav_news">Новости</a>
+                        <a href="documents.html" data-i18n="nav_docs">Документы</a>
+                    </div>
+                </div>
+
+                <a href="contacts.html" data-i18n="nav_contacts">Контакты</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <a href="#" class="btn-login-gold" data-i18n="btn_login">Личный кабинет</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="page-hero">
+            <div class="container fade-in text-center">
+                <span class="hero-subtitle" data-i18n="news_subtitle_top">Информационный центр ассоциации</span>
+                <h1 data-i18n="news_hero_title">Новости и публикации</h1>
+                <p class="hero-desc" data-i18n="news_hero_desc">
+                    Анонсы предстоящих событий, обновления ассоциации, результаты чемпионатов, экспертные публикации и фотоотчёты.
+                </p>
+            </div>
+        </section>
+
+        <!-- ФИЛЬТРЫ -->
+        <section class="news-filter-section">
+            <div class="container">
+                <div class="news-tabs">
+                    <button class="news-tab active" data-filter="all" data-i18n="news_tab_all">Все</button>
+                    <button class="news-tab" data-filter="announce" data-i18n="news_tab_announce">Анонсы</button>
+                    <button class="news-tab" data-filter="association" data-i18n="news_tab_assoc">Новости ассоциации</button>
+                    <button class="news-tab" data-filter="results" data-i18n="news_tab_results">Результаты</button>
+                    <button class="news-tab" data-filter="publication" data-i18n="news_tab_pub">Публикации</button>
+                    <button class="news-tab" data-filter="report" data-i18n="news_tab_report">Фотоотчёты</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ГЛАВНАЯ НОВОСТЬ -->
+        <section class="news-featured-section">
+            <div class="container">
+                <article class="news-featured" data-category="announce">
+                    <div class="news-featured-cover">
+                        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80" alt="GABI Championship 2026">
+                        <span class="news-tag" data-i18n="news_tab_announce">Анонс</span>
+                    </div>
+                    <div class="news-featured-body">
+                        <span class="news-date" data-i18n="news_date_1">10 сентября 2026</span>
+                        <h2 data-i18n="news_feat_title">GABI Championship 2026: открыта регистрация участников</h2>
+                        <p data-i18n="news_feat_desc">
+                            Приём заявок на главный международный чемпионат ассоциации открыт до 1 октября 2026 года. В программе — 9 направлений, 4 возрастных категории и более 50 номинаций.
+                        </p>
+                        <a href="news-item.html" class="btn-gold-large" data-i18n="news_btn_read">Читать полностью</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ЛЕНТА НОВОСТЕЙ -->
+        <section class="news-feed-section">
+            <div class="container">
+                <div class="news-grid">
+
+                    <!-- Анонс -->
+                    <article class="news-card" data-category="announce">
+                        <div class="news-cover">
+                            <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=800&q=80" alt="IEEBA Cup">
+                            <span class="news-tag" data-i18n="news_tab_announce">Анонс</span>
+                        </div>
+                        <div class="news-body">
+                            <span class="news-date" data-i18n="news_date_2">02 сентября 2026</span>
+                            <h3 data-i18n="news_2_title">IEEBA International Cup: подготовка к осеннему сезону</h3>
+                            <p data-i18n="news_2_desc">Опубликован предварительный регламент кубка. Ожидается участие более 200 мастеров из 15 стран.</p>
+                            <a href="news-item.html" class="card-link" data-i18n="news_link_more">Читать далее →</a>
+                        </div>
+                    </article>
+
+                    <!-- Новость ассоциации -->
+                    <article class="news-card" data-category="association">
+                        <div class="news-cover">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Обновление правил">
+                            <span class="news-tag" data-i18n="news_tab_assoc">Новости ассоциации</span>
+                        </div>
+                        <div class="news-body">
+                            <span class="news-date" data-i18n="news_date_3">28 августа 2026</span>
+                            <h3 data-i18n="news_3_title">Обновление правил аккредитации на 2027 год</h3>
+                            <p data-i18n="news_3_desc">Внесены изменения в систему подсчёта баллов и критерии оценки судейской коллегии.</p>
+                            <a href="news-item.html" class="card-link" data-i18n="news_link_more">Читать далее →</a>
+                        </div>
+                    </article>
+
+                    <!-- Результаты -->
+                    <article class="news-card" data-category="results">
+                        <div class="news-cover">
+                            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="Результаты кубка">
+                            <span class="news-tag" data-i18n="news_tab_results">Результаты</span>
+                        </div>
+                        <div class="news-body">
+                            <span class="news-date" data-i18n="news_date_4">15 июля 2026</span>
+                            <h3 data-i18n="news_4_title">Итоги летнего кубка IEEBA Summer Cup 2026</h3>
+                            <p data-i18n="news_4_desc">Опубликованы финальные протоколы и список победителей по всем секциям.</p>
+                            <a href="news-item.html" class="card-link" data-i18n="news_link_more">Читать далее →</a>
+                        </div>
+                    </article>
+
+                    <!-- Публикация -->
+                    <article class="news-card" data-category="publication">
+                        <div class="news-cover">
+                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="Публикация">
+                            <span class="news-tag" data-i18n="news_tab_pub">Публикация</span>
+                        </div>
+                        <div class="news-body">
+                            <span class="news-date" data-i18n="news_date_5">05 июля 2026</span>
+                            <h3 data-i18n="news_5_title">Тренды перманентного макияжа 2026–2027: экспертный обзор</h3>
+                            <p data-i18n="news_5_desc">Аналитическая статья от ведущих судей ассоциации о новых техниках и материалах.</p>
+                            <a href="news-item.html" class="card-link" data-i18n="news_link_more">Читать далее →</a>
+                        </div>
+                    </article>
+
+                    <!-- Фотоотчёт -->
+                    <article class="news-card" data-category="report">
+                        <div class="news-cover">
+                            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Фотоотчёт">
+                            <span class="news-tag" data-i18n="news_tab_report">Фотоотчёт</span>
+                        </div>
+                        <div class="news-body">
+                            <span class="news-date" data-i18n="news_date_6">20 июня 2026</span>
+                            <h3 data-i18n="news_6_title">Фотоотчёт с весеннего чемпионата GABI Spring Cup 2026</h3>
+                            <p data-i18n="news_6_desc">Более 100 фотографий с конкурсных дней, церемонии награждения и backstage.</p>
+                            <a href="news-item.html" class="card-link" data-i18n="news_link_more">Смотреть галерею →</a>
+                        </div>
+                    </article>
+
+                    <!-- Новость ассоциации -->
+                    <article class="news-card" data-category="association">
+                        <div class="news-cover">
+                            <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80" alt="Партнёрство">
+                            <span class="news-tag" data-i18n="news_tab_assoc">Новости ассоциации</span>
+                        </div>
+                        <div class="news-body">
+                            <span class="news-date" data-i18n="news_date_7">01 июня 2026</span>
+                            <h3 data-i18n="news_7_title">GABI & IEEBA и Global Beauty Forum заключили партнёрство</h3>
+                            <p data-i18n="news_7_desc">Совместные образовательные программы и поддержка международных чемпионатов.</p>
+                            <a href="news-item.html" class="card-link" data-i18n="news_link_more">Читать далее →</a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="news-empty" id="newsEmpty" hidden>
+                    <p data-i18n="news_empty_text">По выбранной категории новостей пока нет.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="main.html" class="logo">GABI & IEEBA</a>
+                <p data-i18n="footer_desc">Международная ассоциация бьюти-специалистов и экспертов эстетической медицины.</p>
+                <div class="social-links">
+                    <a href="#" class="social-btn">Telegram</a>
+                    <a href="#" class="social-btn">VKontakte</a>
+                    <a href="#" class="social-btn">Instagram</a>
+                </div>
+            </div>
+
+            <div class="footer-nav-col">
+                <h4 data-i18n="footer_col_nav">Навигация</h4>
+                <ul>
+                    <li><a href="main.html" data-i18n="nav_home">Главная</a></li>
+                    <li><a href="about.html" data-i18n="nav_about">Об ассоциации</a></li>
+                    <li><a href="specialists.html" data-i18n="nav_specialists">Реестр специалистов</a></li>
+                    <li><a href="rating.html" data-i18n="nav_rating">Единый рейтинг</a></li>
+                    <li><a href="contacts.html" data-i18n="nav_contacts">Контакты</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-nav-col">
+                <h4 data-i18n="footer_col_part">Участие и инфо</h4>
+                <ul>
+                    <li><a href="membership.html" data-i18n="nav_membership">Членство в ассоциации</a></li>
+                    <li><a href="accreditation.html" data-i18n="nav_accreditation">Аккредитация школ</a></li>
+                    <li><a href="events.html" data-i18n="nav_events_all">Чемпионаты и события</a></li>
+                    <li><a href="news.html" data-i18n="nav_news">Новости индустрии</a></li>
+                    <li><a href="documents.html" data-i18n="nav_docs">Официальные документы</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contacts">
+                <h4 data-i18n="footer_contacts_title">Контакты</h4>
+                <p data-i18n="footer_address">📍 г. Москва, Пресненская наб., д. 12</p>
+                <p>✉️ info@gabi-ieeba.org</p>
+                <p>📞 +7 (800) 555-35-35</p>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 GABI & IEEBA Association. <span data-i18n="footer_rights">Все права защищены.</span></p>
+            <div class="footer-legal">
+                <a href="#" data-i18n="privacy_policy">Политика конфиденциальности</a>
+                <a href="#" data-i18n="terms_use">Пользовательское соглашение</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/news.js"></script>
+</body>
+</html>

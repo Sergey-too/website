@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход — GABI & IEEBA</title>
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="main.html" class="logo">GABI & IEEBA</a>
+
+            <nav class="nav">
+                <a href="about.html" data-i18n="nav_about">Об ассоциации</a>
+
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle"><span data-i18n="nav_participation">Участие</span> <span class="arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="membership.html" data-i18n="nav_membership">Членство</a>
+                        <a href="accreditation.html" data-i18n="nav_accreditation">Аккредитация</a>
+                        <a href="events.html" data-i18n="nav_events_all">Мероприятия</a>
+                    </div>
+                </div>
+
+                <a href="specialists.html" data-i18n="nav_specialists">Специалисты</a>
+                <a href="rating.html" data-i18n="nav_rating">Рейтинг</a>
+
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle"><span data-i18n="nav_info">Информация</span> <span class="arrow">▾</span></a>
+                    <div class="dropdown-menu">
+                        <a href="news.html" data-i18n="nav_news">Новости</a>
+                        <a href="documents.html" data-i18n="nav_docs">Документы</a>
+                    </div>
+                </div>
+
+                <a href="contacts.html" data-i18n="nav_contacts">Контакты</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <a href="register.html" class="btn-login-gold" data-i18n="btn_register">Регистрация</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="auth-section">
+            <div class="container">
+                <div class="auth-card fade-in">
+                    <span class="auth-badge" data-i18n="auth_login_badge">Вход в систему</span>
+                    <h1 data-i18n="auth_login_title">Личный кабинет</h1>
+                    <p class="auth-subtitle" data-i18n="auth_login_subtitle">
+                        Войдите в личный кабинет, чтобы подавать заявки на чемпионаты, управлять аккредитацией и отслеживать свой рейтинг.
+                    </p>
+
+                    <!-- Уведомление об ошибке входа (заполняется скриптом) -->
+                    <div class="auth-notice notice-error" id="loginNotice" hidden>
+                        <span class="notice-icon">⚠</span>
+                        <span data-i18n="auth_login_error">Неверный email или пароль. Попробуйте ещё раз.</span>
+                    </div>
+
+                    <form class="auth-form" id="loginForm" novalidate>
+
+                        <div class="form-group">
+                            <label for="loginEmail">
+                                <span data-i18n="auth_field_email">Email</span>
+                                <span class="required">*</span>
+                            </label>
+                            <div class="input-wrap">
+                                <input type="email" id="loginEmail" name="email" autocomplete="email" placeholder="you@example.com" required>
+                            </div>
+                            <span class="field-error" data-i18n="auth_err_email">Введите корректный email</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="loginPassword">
+                                <span data-i18n="auth_field_password">Пароль</span>
+                                <span class="required">*</span>
+                            </label>
+                            <div class="input-wrap">
+                                <input type="password" id="loginPassword" name="password" autocomplete="current-password" placeholder="••••••••" required>
+                                <button type="button" class="input-toggle" data-i18n="auth_show_pass">Показать</button>
+                            </div>
+                            <span class="field-error" data-i18n="auth_err_password">Введите пароль (минимум 8 символов)</span>
+                        </div>
+
+                        <!-- Капча -->
+                        <div class="captcha-box" id="loginCaptcha">
+                            <input type="checkbox" id="loginCaptchaCheck">
+                            <label for="loginCaptchaCheck" data-i18n="auth_captcha">Я не робот</label>
+                        </div>
+
+                        <button type="submit" class="btn-submit" data-i18n="auth_btn_login">Войти</button>
+
+                        <div class="auth-links">
+                            <a href="forgot.html" data-i18n="auth_forgot_link">Забыли пароль?</a>
+                            <span class="muted" data-i18n="auth_no_account">Нет аккаунта?</span>
+                            <a href="register.html" data-i18n="auth_register_link">Создать</a>
+                        </div>
+                    </form>
+
+                    <div class="auth-divider"><span data-i18n="auth_or">или</span></div>
+
+                    <div class="auth-footer-note">
+                        <span data-i18n="auth_register_prompt">Впервые в GABI & IEEBA?</span>
+                        <a href="register.html" data-i18n="auth_register_prompt_link">Зарегистрируйтесь</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/auth.js"></script>
+</body>
+</html>
